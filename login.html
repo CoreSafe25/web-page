@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoreSafe - Login</title>
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+ <nav>
+    <div class="wordmark"><a href="homepage_index.html" class="wordmark">CoreSafe</a></div>
+    <ul>    
+      <li><a href = "#">Alertas</a></li>
+      <li><a href = "#">Panel</a></li>
+      <li><a href = "#">Reportes</a></li>
+      <li><a href = "#">Estadísticas</a></li>
+      <li><a href = "about_us.html">About us</a></li>
+      <li><a href = "login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Login / Sign Up -->
+  <div class="container">
+    <div class="form-box">
+      <h2>CoreSafe</h2>
+
+      <!-- Login Form -->
+      <form id="login-form" class="form active">
+        <input type="email" placeholder="Correo electrónico" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="submit">Login</button>
+        <p class="toggle-text">¿No tienes cuenta? <span class="toggle-btn" data-target="signup-form">Regístrate</span></p>
+      </form>
+
+      <!-- Sign Up Form -->
+      <form id="signup-form" class="form">
+        <input type="text" placeholder="Nombre completo" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="submit">Sign Up</button>
+        <p class="toggle-text">¿Ya tienes cuenta? <span class="toggle-btn" data-target="login-form">Login</span></p>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
