@@ -1,0 +1,122 @@
+/* Reset y fuentes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+nav {
+  position: fixed; /* siempre visible */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #504037;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+nav .wordmark {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav ul li:hover {
+  text-decoration: underline;
+}
+
+/* Ajuste del body para navbar fijo */
+body {
+  padding-top: 70px; /* altura aproximada del navbar */
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Login / Sign Up */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.form-box {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.form-box h2 {
+  margin-bottom: 1.5rem;
+  color: #E67E22;
+}
+
+/* Forms */
+.form {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form.active {
+  display: flex;
+}
+
+input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+button {
+  padding: 0.75rem;
+  background-color: #E67E22;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #A85D1B;
+}
+
+.toggle-text {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.toggle-text .toggle-btn {
+  color: #64B13E;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
