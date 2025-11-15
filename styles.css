@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.topheader {
+  background-color: #4d2d23;
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+.Menu-Horizontal {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.Menu-Horizontal li {
+  position: relative;
+  margin-right: 20px;
+}
+
+.Menu-Horizontal a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+/* SUBMENÚ */
+.Menu-Vertical {
+  display: none;
+  position: absolute;
+  background: white;
+  list-style: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.Menu-Vertical li a {
+  color: black;
+}
+
+.Menu-Horizontal li:hover .Menu-Vertical {
+  display: block;
+}
+
+/* CONTENEDOR */
+.contenedor {
+  background: #f3f3f3;
+  padding: 25px;
+}
+
+/* TÍTULO */
+.barra-titulo {
+  display: flex;
+  align-items: center;
+  background: #de7a27;
+  color: white;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.flecha {
+  font-size: 25px;
+  margin-right: 15px;
+}
+
+.select-tipo {
+  margin-left: auto;
+}
+
+/* TARJETAS */
+.tarjeta {
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.naranja {
+  background: #de7a27;
+  color: white;
+}
+
+.gris {
+  background: #d6d6d6;
+}
+
+.bolita {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 20px;
+}
