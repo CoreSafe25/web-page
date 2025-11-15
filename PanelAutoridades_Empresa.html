@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CoreSafe - Panel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="mobile-container">
+      <header class="app-header">
+        <div class="header-content">
+          <i class="fas fa-bars menu-icon"></i>
+
+          <span class="logo-text">CoreSafe</span>
+
+          <i class="fas fa-user-circle user-icon"></i>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <h1 class="panel-title">PANEL AUTORIDADES / EMPRESA</h1>
+
+        <p class="subtitle bold">Listado de reportes</p>
+
+        <div class="report-list">
+          <div
+            class="report-card"
+            data-id="1"
+            data-title="Grietas en construccion"
+            data-date="2025-10-10"
+            data-urgency="ALTA"
+            data-location="Plaza San Pedro, Zona Céntrica"
+            data-comments="5"
+            data-likes="100"
+            data-status="Activo"
+            data-description="Encontré un daño en el techo de la pared, justo en una esquina. Parece que el material blanco del techo se está cayendo o despegando y se ve una grieta grande y marcada."
+          >
+            <h2 class="report-title">Grietas en construccion</h2>
+
+            <p class="report-detail">Fecha : 2025-10-10</p>
+
+            <p class="report-detail report-urgency high">
+              Urgencia: <span class="urgency-value">Alta</span>
+            </p>
+
+            <div class="report-stats">
+              <span class="stat-item"
+                ><i class="fas fa-comment"></i> 5 Comentarios</span
+              >
+
+              <span class="stat-item"
+                ><i class="fas fa-thumbs-up"></i> 100 likes</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="report-card"
+            data-id="2"
+            data-title="Grietas en los baños"
+            data-date="2025-10-10"
+            data-urgency="ALTA"
+            data-location="Mall Aventura, Piso 3 - Baño Hombres"
+            data-comments="18"
+            data-likes="65"
+            data-status="Revisión"
+            data-description="Hay grietas significativas en el azulejo del piso y una filtración de agua que es visible en la esquina del techo. Se necesita inspección urgente."
+          >
+            <h2 class="report-title">Grietas en los baños</h2>
+
+            <p class="report-detail">Fecha : 2025-10-10</p>
+
+            <p class="report-detail report-urgency high">
+              Urgencia: <span class="urgency-value">Alta</span>
+            </p>
+
+            <div class="report-stats">
+              <span class="stat-item"
+                ><i class="fas fa-comment"></i> 18 Comentarios</span
+              >
+
+              <span class="stat-item"
+                ><i class="fas fa-thumbs-up"></i> 65 likes</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="report-card"
+            data-id="4"
+            data-title="Fuga de agua en sotano"
+            data-date="2025-10-09"
+            data-urgency="BAJA"
+            data-location="Estación de Bombeo, Sótano - Sector de bombas"
+            data-comments="2"
+            data-likes="8"
+            data-status="Pendiente"
+            data-description="Pequeña fuga en un acople de tubería de agua no potable. Se ha controlado. Requiere reemplazo de la junta."
+          >
+            <h2 class="report-title">Fuga de agua en sotano</h2>
+
+            <p class="report-detail">Fecha : 2025-10-09</p>
+
+            <p class="report-detail report-urgency low">
+              Urgencia: <span class="urgency-value">Baja</span>
+            </p>
+
+            <div class="report-stats">
+              <span class="stat-item"
+                ><i class="fas fa-comment"></i> 2 Comentarios</span
+              >
+
+              <span class="stat-item"
+                ><i class="fas fa-thumbs-up"></i> 8 likes</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="report-card"
+            data-id="5"
+            data-title="Cableado expuesto en pasillo C"
+            data-date="2025-10-09"
+            data-urgency="ALTA"
+            data-location="Cines Perú, Pasillo C - cerca del comedor"
+            data-comments="32"
+            data-likes="88"
+            data-status="Revisión"
+            data-description="El revestimiento de varios cables eléctricos se ha caído dejando el cobre expuesto a la altura de la cabeza. Peligro de electrocución."
+          >
+            <h2 class="report-title">Cableado expuesto en pasillo C</h2>
+
+            <p class="report-detail">Fecha : 2025-10-09</p>
+
+            <p class="report-detail report-urgency high">
+              Urgencia: <span class="urgency-value">Alta</span>
+            </p>
+
+            <div class="report-stats">
+              <span class="stat-item"
+                ><i class="fas fa-comment"></i> 32 Comentarios</span
+              >
+
+              <span class="stat-item"
+                ><i class="fas fa-thumbs-up"></i> 88 likes</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="report-card"
+            data-id="6"
+            data-title="Ascensor averiado"
+            data-date="2025-10-08"
+            data-urgency="ALTA"
+            data-location="Edificio Principal, Torre A - Ascensor 3"
+            data-comments="12"
+            data-likes="75"
+            data-status="Activo"
+            data-description="El ascensor se detuvo bruscamente entre el piso 4 y 5. Hay personas atrapadas. Se requiere servicio técnico inmediato."
+          >
+            <h2 class="report-title">Ascensor averiado</h2>
+
+            <p class="report-detail">Fecha : 2025-10-08</p>
+
+            <p class="report-detail report-urgency high">
+              Urgencia: <span class="urgency-value">Alta</span>
+            </p>
+
+            <div class="report-stats">
+              <span class="stat-item"
+                ><i class="fas fa-comment"></i> 12 Comentarios</span
+              >
+
+              <span class="stat-item"
+                ><i class="fas fa-thumbs-up"></i> 75 likes</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="report-card"
+            data-id="7"
+            data-title="Ruido excesivo de maquinaria"
+            data-date="2025-10-07"
+            data-urgency="MEDIA"
+            data-location="Área de Producción, Sector 4 - Máquina CNC"
+            data-comments="3"
+            data-likes="15"
+            data-status="Pendiente"
+            data-description="La máquina de control numérico está produciendo un ruido anormalmente fuerte, lo que podría indicar un problema mecánico serio o un rodamiento defectuoso."
+          >
+            <h2 class="report-title">Ruido excesivo de maquinaria</h2>
+
+            <p class="report-detail">Fecha : 2025-10-07</p>
+
+            <p class="report-detail report-urgency medium">
+              Urgencia: <span class="urgency-value">Media</span>
+            </p>
+
+            <div class="report-stats">
+              <span class="stat-item"
+                ><i class="fas fa-comment"></i> 3 Comentarios</span
+              >
+
+              <span class="stat-item"
+                ><i class="fas fa-thumbs-up"></i> 15 likes</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="report-card"
+            data-id="8"
+            data-title="Bombilla quemada en pasillo"
+            data-date="2025-10-07"
+            data-urgency="BAJA"
+            data-location="Pasillo de Oficinas, Piso 2 - Frente a Oficina 205"
+            data-comments="0"
+            data-likes="2"
+            data-status="Activo"
+            data-description="Una de las luces del pasillo está intermitente/quemada, creando un punto oscuro. No es un peligro inmediato, pero es molesto."
+          >
+            <h2 class="report-title">Bombilla quemada en pasillo</h2>
+
+            <p class="report-detail">Fecha : 2025-10-07</p>
+
+            <p class="report-detail report-urgency low">
+              Urgencia: <span class="urgency-value">Baja</span>
+            </p>
+
+            <div class="report-stats">
+              <span class="stat-item"
+                ><i class="fas fa-comment"></i> 0 Comentarios</span
+              >
+
+              <span class="stat-item"
+                ><i class="fas fa-thumbs-up"></i> 2 likes</span
+              >
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div id="report-modal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="detail-title">Vista detallada de reportes</h2>
+
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+          </div>
+
+          <div class="detail-section report-summary" data-current-report-id="">
+            <h3 class="report-main-title" id="modal-title"></h3>
+
+            <p class="detail-item">
+              Usuario : <span id="modal-user-name">Datos del usuario</span>
+            </p>
+
+            <p class="detail-item">
+              Contacto : <span id="modal-user-phone">N/A</span>
+            </p>
+
+            <div class="detail-line urgency-line">
+              <p class="detail-item">
+                Urgencia :
+
+                <span class="urgency-value" id="modal-urgency"></span>
+              </p>
+
+              <span class="report-status" id="modal-status"></span>
+            </div>
+
+            <p class="detail-item">Fecha : <span id="modal-date"></span></p>
+
+            <p class="detail-item">
+              Ubicacion : <span id="modal-location"></span>
+            </p>
+
+            <div class="detail-line likes-line">
+              <div
+                class="likes-count report-like-wrapper"
+                id="report-like-btn"
+                onclick="handleReportLike()"
+              >
+                <i class="far fa-thumbs-up"></i>
+
+                <span id="modal-likes"></span> Likes
+              </div>
+
+              <button class="action-btn" id="action-btn">
+                Aplicar / Contactar
+              </button>
+            </div>
+          </div>
+
+          <div class="detail-section description-box">
+            <h3 class="section-title">Descripcion</h3>
+
+            <p class="description-text" id="modal-description"></p>
+          </div>
+
+          <div class="detail-section evidence-box">
+            <h3 class="section-title">Fotos / Evidencia</h3>
+
+            <div class="image-gallery">
+              <div class="image-with-description">
+                <img
+                  src="https://via.placeholder.com/100x100/F0F0F0/777777?text=Grieta+Techo"
+                  alt="Grieta en el techo"
+                  class="report-image"
+                />
+              </div>
+
+              <div class="image-with-description">
+                <img
+                  src="https://via.placeholder.com/100x100/F0F0F0/777777?text=Edificio+Vista"
+                  alt="Vista del Edificio"
+                  class="report-image"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-section comments-box">
+            <h3 class="section-title">
+              Comentarios (<span id="modal-comments-count">0</span>)
+            </h3>
+
+            <div id="modal-comments-list"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="confirmation-overlay" class="modal confirmation-modal">
+        <div class="confirmation-content">
+          <div class="confirmation-icon">
+            <i class="fas fa-check"></i>
+          </div>
+
+          <p class="confirmation-text">Pasando a Revisión...</p>
+        </div>
+      </div>
+
+      <footer class="app-footer">
+        <div class="footer-left">
+          <p class="footer-logo">CoreSafe</p>
+
+          <p class="copyright">&copy; 2025 CoreSafe All rights reserved.</p>
+        </div>
+
+        <div class="footer-right">
+          <a href="#">FAQ</a>
+
+          <a href="#">COOKIE POLICY</a>
+
+          <a href="#">PRIVACY POLICY</a>
+
+          <a href="#">TERMS & CONDITIONS</a>
+        </div>
+      </footer>
+    </div>
+
+    <div id="reply-form-template" style="display: none">
+      <div class="reply-form">
+        <textarea
+          placeholder="Escribe tu respuesta..."
+          class="reply-input"
+        ></textarea>
+
+        <button class="reply-send-btn" onclick="sendReply(this)">Enviar</button>
+      </div>
+    </div>
+
+    <script>
+      // --- DATA SIMULADA ---
+
+      const simulatedComments = [
+        {
+          user: "Nikolas Guillermo",
+
+          text: "Asu, eso se ve muy feo, deberían de solucionarlo de manera Inmediata",
+
+          likes: 3,
+
+          authority: false,
+        },
+
+        {
+          user: "Ana Rodriguez",
+
+          text: "Confirmo, es un peligro. Lo reporté hace una semana.",
+
+          likes: 10,
+
+          authority: false,
+        },
+
+        {
+          user: "Jefe de Mantenimiento",
+
+          text: "Hemos tomado nota y asignado un equipo. Revisión para mañana.",
+
+          likes: 5,
+
+          authority: true,
+        },
+
+        {
+          user: "Carlos López",
+
+          text: "Qué irresponsabilidad, ¿nadie supervisa esto?",
+
+          likes: 1,
+
+          authority: false,
+        },
+
+        {
+          user: "María Pérez",
+
+          text: "Espero que no pase a mayores, la seguridad es lo primero.",
+
+          likes: 7,
+
+          authority: false,
+        },
+      ];
+
+      // Array de usuarios simulados
+
+      const simulatedUsers = [
+        { name: "Juan Pérez", phone: "987 654 321" },
+
+        { name: "Mónica Soto", phone: "998 765 432" },
+
+        { name: "Pedro Ramirez", phone: "976 543 210" },
+
+        { name: "Sofía Vargas", phone: "965 432 109" },
+
+        { name: "Luis Mendoza", phone: "954 321 098" },
+      ];
+
+      // Variables globales para la interactividad
+
+      let hasReportBeenLiked = false;
+
+      let currentReportCard = null;
+
+      // --- FUNCIONES DE UTILIDAD ---
+
+      // Función para obtener un usuario aleatorio
+
+      function getRandomUser() {
+        const randomIndex = Math.floor(Math.random() * simulatedUsers.length);
+
+        return simulatedUsers[randomIndex];
+      }
+
+      // --- MANEJO DEL DOM Y EVENTOS ---
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("report-modal");
+
+        const confirmationOverlay = document.getElementById(
+          "confirmation-overlay"
+        );
+
+        const commentsList = document.getElementById("modal-comments-list");
+
+        const actionButton = document.getElementById("action-btn");
+
+        const modalStatusElement = document.getElementById("modal-status");
+
+        const confirmationText =
+          confirmationOverlay.querySelector(".confirmation-text");
+
+        const userNameElement = document.getElementById("modal-user-name");
+
+        const userPhoneElement = document.getElementById("modal-user-phone");
+
+        function getReportCards() {
+          return document.querySelectorAll(".report-card");
+        }
+
+        function initializeCardEvents() {
+          getReportCards().forEach((card) =>
+            card.removeEventListener("click", openReportModal)
+          );
+
+          getReportCards().forEach((card) =>
+            card.addEventListener("click", openReportModal)
+          );
+        }
+
+        // Cierra el modal de detalles del reporte
+
+        window.closeModal = function () {
+          modal.style.display = "none";
+
+          commentsList
+
+            .querySelectorAll(".reply-form")
+
+            .forEach((form) => form.remove());
+
+          currentReportCard = null;
+        };
+
+        // Cierra el modal de confirmación
+
+        window.closeConfirmationOverlay = function () {
+          confirmationOverlay.style.display = "none";
+        };
+
+        // Función principal para la acción de "Aplicar / Contactar"
+
+        window.handleActionClick = function () {
+          if (actionButton.disabled) return;
+
+          const currentStatus = modalStatusElement.textContent.trim();
+
+          if (currentStatus === "Activo" || currentStatus === "Pendiente") {
+            confirmationText.textContent = "Aplicando Contacto...";
+
+            confirmationOverlay.style.display = "flex";
+
+            setTimeout(() => {
+              // 1. Cambiar estado en el Modal
+
+              modalStatusElement.textContent = "Revisión";
+
+              modalStatusElement.className = "report-status revisión";
+
+              // 2. Cambiar estado en el Botón
+
+              actionButton.textContent = "Reporte en Revisión";
+
+              actionButton.disabled = true;
+
+              actionButton.classList.add("disabled-btn");
+
+              actionButton.onclick = null;
+
+              // 3. Cambiar estado en la tarjeta del listado
+
+              if (currentReportCard) {
+                currentReportCard.dataset.status = "Revisión";
+              }
+
+              // 4. Muestra la confirmación final y la oculta
+
+              confirmationText.textContent = "¡Pasado a Revisión!";
+
+              setTimeout(() => {
+                closeConfirmationOverlay();
+              }, 800);
+            }, 500);
+          } else {
+            console.warn("Acción no permitida en este estado.");
+          }
+        };
+
+        // --- LIKES DEL REPORTE PRINCIPAL ---
+
+        const reportLikeIcon = document.querySelector("#report-like-btn i");
+
+        const reportLikeCount = document.getElementById("modal-likes");
+
+        window.handleReportLike = function () {
+          let currentLikes = parseInt(reportLikeCount.textContent);
+
+          if (hasReportBeenLiked) {
+            reportLikeIcon.classList.remove("fas", "report-liked");
+
+            reportLikeIcon.classList.add("far");
+
+            currentLikes = currentLikes - 1;
+
+            hasReportBeenLiked = false;
+          } else {
+            reportLikeIcon.classList.remove("far");
+
+            reportLikeIcon.classList.add("fas", "report-liked");
+
+            currentLikes = currentLikes + 1;
+
+            hasReportBeenLiked = true;
+          }
+
+          reportLikeCount.textContent = currentLikes;
+        };
+
+        // --- LIKES DE COMENTARIOS ---
+
+        window.handleCommentLike = function (btn) {
+          const icon = btn.querySelector(".fa-heart");
+
+          const countSpan = btn.querySelector(".like-count");
+
+          let currentLikes = parseInt(countSpan.textContent);
+
+          if (icon.classList.contains("fas")) {
+            icon.classList.remove("fas", "liked");
+
+            icon.classList.add("far");
+
+            currentLikes = currentLikes - 1;
+          } else {
+            icon.classList.remove("far");
+
+            icon.classList.add("fas", "liked");
+
+            currentLikes = currentLikes + 1;
+          }
+
+          countSpan.textContent = currentLikes;
+        };
+
+        // --- COMENTARIOS Y RESPUESTAS ---
+
+        function generateComments(count) {
+          let commentsHTML = "";
+
+          // Usamos el id del reporte para simular comentarios diferentes (aunque en este caso son siempre los mismos, la lógica existe)
+
+          const commentsToShow = simulatedComments.slice(
+            0,
+
+            Math.min(count, simulatedComments.length)
+          );
+
+          commentsToShow.forEach((comment, index) => {
+            const authorityClass = comment.authority ? "authority-user" : "";
+
+            commentsHTML += `
+
+
+
+                        <div class="comment-card" data-comment-id="${index}">
+
+
+
+                            <div class="comment-header">
+
+
+
+                                <i class="fas fa-user-circle comment-icon"></i>
+
+
+
+                                <span class="comment-user ${authorityClass}">${comment.user}</span>
+
+
+
+                            </div>
+
+
+
+                            <p class="comment-text">${comment.text}</p>
+
+
+
+                            <div class="comment-actions">
+
+
+
+                                <span class="comment-like-btn" onclick="handleCommentLike(this)">
+
+
+
+                                    <i class="far fa-heart"></i>
+
+
+
+                                    <span class="like-count">${comment.likes}</span> Likes
+
+
+
+                                </span>
+
+
+
+                                <span class="comment-reply-btn" onclick="showReplyForm(${index})"><i class="fas fa-reply"></i> Responder</span>
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+                    `;
+          });
+
+          commentsList.innerHTML = commentsHTML;
+        }
+
+        window.showReplyForm = function (commentId) {
+          const targetCard = commentsList.querySelector(
+            `[data-comment-id="${commentId}"]`
+          );
+
+          const existingForm = targetCard.querySelector(".reply-form");
+
+          if (existingForm) {
+            existingForm.remove();
+
+            return;
+          }
+
+          const formTemplate = document.getElementById(
+            "reply-form-template"
+          ).firstElementChild;
+
+          const newForm = formTemplate.cloneNode(true);
+
+          commentsList
+
+            .querySelectorAll(".reply-form")
+
+            .forEach((form) => form.remove());
+
+          targetCard.appendChild(newForm);
+
+          newForm.querySelector(".reply-input").focus();
+        };
+
+        window.sendReply = function (btn) {
+          const form = btn.closest(".reply-form");
+
+          const replyText = form.querySelector(".reply-input").value.trim();
+
+          if (replyText === "") {
+            alert("Por favor, escribe una respuesta.");
+
+            return;
+          }
+
+          const newReplyHTML = `
+
+
+
+                    <div class="comment-card nested-reply">
+
+
+
+                        <div class="comment-header">
+
+
+
+                            <i class="fas fa-user-circle comment-icon"></i>
+
+
+
+                            <span class="comment-user authority-user">Tu Nombre (Respuesta)</span>
+
+
+
+                        </div>
+
+
+
+                        <p class="comment-text">${replyText}</p>
+
+
+
+                        <div class="comment-actions">
+
+
+
+                            <span class="comment-like-btn" onclick="handleCommentLike(this)">
+
+
+
+                                <i class="far fa-heart"></i>
+
+
+
+                                <span class="like-count">0</span> Likes
+
+
+
+                            </span>
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+                `;
+
+          form.insertAdjacentHTML("beforebegin", newReplyHTML);
+
+          form.remove();
+        };
+
+        // --- LÓGICA PRINCIPAL DE APERTURA DEL MODAL ---
+
+        function openReportModal() {
+          currentReportCard = this;
+
+          const id = this.dataset.id;
+
+          const title = this.dataset.title;
+
+          const date = this.dataset.date;
+
+          const urgency = this.dataset.urgency;
+
+          const location = this.dataset.location;
+
+          const commentsCount = parseInt(this.dataset.comments);
+
+          const likes = this.dataset.likes;
+
+          const status = this.dataset.status;
+
+          const description = this.dataset.description;
+
+          // OBTENER Y ASIGNAR USUARIO ALEATORIO
+
+          const randomUser = getRandomUser();
+
+          userNameElement.textContent = randomUser.name;
+
+          userPhoneElement.textContent = randomUser.phone;
+
+          document.querySelector(".report-summary").dataset.currentReportId =
+            id;
+
+          document.getElementById("modal-title").textContent = title;
+
+          document.getElementById("modal-date").textContent = date;
+
+          document.getElementById("modal-location").textContent = location;
+
+          document.getElementById("modal-likes").textContent = likes;
+
+          document.getElementById("modal-description").textContent =
+            description;
+
+          document.getElementById("modal-comments-count").textContent =
+            commentsCount;
+
+          const modalUrgency = document.getElementById("modal-urgency");
+
+          modalUrgency.textContent = urgency;
+
+          modalUrgency.className = "urgency-value " + urgency.toLowerCase();
+
+          modalStatusElement.textContent = status;
+
+          modalStatusElement.className =
+            "report-status " + status.toLowerCase();
+
+          // Configuración del Botón de Acción
+
+          actionButton.classList.remove("applied-btn", "disabled-btn");
+
+          actionButton.disabled = false;
+
+          actionButton.innerHTML = "Aplicar / Contactar";
+
+          if (status === "Revisión" || status === "Completado") {
+            actionButton.textContent = `Reporte en ${status}`;
+
+            actionButton.disabled = true;
+
+            actionButton.classList.add("disabled-btn");
+
+            actionButton.onclick = null;
+          } else {
+            actionButton.onclick = handleActionClick;
+          }
+
+          // Configuración del Like del Reporte
+
+          hasReportBeenLiked = false;
+
+          reportLikeIcon.classList.remove("fas", "report-liked");
+
+          reportLikeIcon.classList.add("far");
+
+          reportLikeIcon.classList.remove("fa-thumbs-up", "fa-thumbs-down");
+
+          reportLikeIcon.classList.add("fa-thumbs-up");
+
+          generateComments(commentsCount);
+
+          modal.style.display = "flex";
+        }
+
+        // --- LISTENERS GENERALES ---
+
+        initializeCardEvents();
+
+        window.addEventListener("click", (event) => {
+          if (event.target == modal) {
+            closeModal();
+          }
+        });
+
+        window.addEventListener("click", (event) => {
+          if (event.target == confirmationOverlay) {
+            closeConfirmationOverlay();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
