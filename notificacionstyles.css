@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #e0e0e0; /* Gray */
+  color: #5d4037; /* Brown */
+  line-height: 1.6;
+  padding-bottom: 40px;
+}
+
+/* Estilos de navegación */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5d4037; /* White */
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px white; /* Brown con transparencia */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .wordmark a {
+  text-decoration: none;
+  color: #e67e22; /* Orange */
+  font-size: 28px; /* Header 2 */
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white; /* Brown */
+  font-weight: 500;
+  font-size: 16px; /* Text */
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #e67e22; /* Orange */
+  color: #ffffff; /* White */
+}
+
+/* Encabezado del centro de notificaciones */
+.notificaciones_header {
+  background-color: #ffffff; /* White */
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(93, 64, 55, 0.08); /* Brown con transparencia */
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 6px solid #e67e22; /* Orange */
+}
+
+.notificaciones_header h2 {
+  color: #5d4037; /* Brown */
+  font-size: 28px; /* Header 2 */
+  font-weight: 600;
+}
+
+.notificaciones_header label {
+  margin-right: 10px;
+  color: #5d4037; /* Brown */
+  font-weight: 500;
+  font-size: 16px; /* Text */
+}
+
+.notificaciones_header select {
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 1px solid #5d4037; /* Brown */
+  background-color: #ffffff; /* White */
+  color: #5d4037; /* Brown */
+  font-size: 16px; /* Text */
+  min-width: 200px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.notificaciones_header select:focus {
+  outline: none;
+  border-color: #e67e22; /* Orange */
+  box-shadow: 0 0 0 2px rgba(230, 126, 34, 0.2); /* Orange con transparencia */
+}
+
+/* Lista de notificaciones */
+.lista_notificaciones {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.notificacion {
+  background-color: #ffffff; /* White */
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(93, 64, 55, 0.08); /* Brown con transparencia */
+  display: flex;
+  flex-direction: column;
+  border-left: 6px solid;
+  position: relative;
+}
+
+/* Estilos para diferentes prioridades - ajustados a la imagen */
+.notificacion:nth-child(1) {
+  border-left-color: #e67e22; /* Orange para alta prioridad */
+}
+
+.notificacion:nth-child(2) {
+  border-left-color: #e67e22; /* Orange para alta prioridad */
+}
+
+.notificacion:nth-child(3) {
+  border-left-color: #5d4037; /* Brown para media prioridad */
+}
+
+/* Contenido de notificación */
+.notificacion p {
+  margin-bottom: 12px;
+  font-size: 16px; /* Text */
+  display: flex;
+  align-items: center;
+}
+
+.notificacion strong {
+  color: #5d4037; /* Brown */
+  font-weight: 600;
+  min-width: 100px;
+  display: inline-block;
+}
+
+.notificacion p:after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    #5d4037 70%,
+    transparent 100%
+  ); /* Brown */
+  margin-left: 15px;
+  opacity: 0.3;
+}
+
+/* Indicador de número */
+.notificacion::before {
+  content: attr(data-number);
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  background-color: #27ae60; /* Green */
+  color: #ffffff; /* White */
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px; /* Text */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.notificacion:nth-child(1)::before {
+  content: "1";
+}
+
+.notificacion:nth-child(2)::before {
+  content: "2";
+}
+
+.notificacion:nth-child(3)::before {
+  content: "3";
+}
+
+/* Botones de notificación */
+.notificacion .marcar_leido,
+.notificacion .ver_mas {
+  align-self: flex-end;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px; /* Text */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.notificacion .marcar_leido {
+  background-color: #e67e22; /* Orange */
+  color: #ffffff; /* White */
+}
+
+.notificacion .marcar_leido:hover {
+  background-color: #d35400; /* Orange más oscuro */
+}
+
+.notificacion .ver_mas {
+  background-color: #5d4037; /* Brown */
+  color: #ffffff; /* White */
+}
+
+.notificacion .ver_mas:hover {
+  background-color: #3e2723; /* Brown más oscuro */
+}
+
+/* Contenedor de botones */
+.notificacion div:last-child {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+/* Estilos específicos para los textos dentro de las notificaciones */
+.notificacion p strong:first-child {
+  font-size: 16px; /* Text */
+}
+
+/* Separador entre notificaciones (línea punteada) */
+.notificacion:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 5%;
+  width: 90%;
+  height: 1px;
+  border-bottom: 1px dashed #5d4037; /* Brown */
+  opacity: 0.2;
+}
+/* Sección de descripción de notificación */
+.notificacion_descripcion {
+  background-color: #ffffff; /* White */
+  margin: 0 auto 30px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(93, 64, 55, 0.08); /* Brown con transparencia */
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 25px;
+  border-left: 6px solid #e67e22; /* Orange */
+  position: relative;
+}
+
+/* Indicador de número (similar al diseño anterior) */
+.notificacion_descripcion::before {
+  content: "1";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  background-color: #27ae60; /* Green */
+  color: #ffffff; /* White */
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px; /* Text */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+/* Imagen */
+.notificacion_descripcion .imagen {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0; /* Gray */
+  background-color: #f8f8f8;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notificacion_descripcion .imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.notificacion_descripcion .imagen img:hover {
+  transform: scale(1.02);
+}
+
+/* Texto de descripción */
+.notificacion_descripcion p {
+  font-size: 16px; /* Text */
+  line-height: 1.7;
+  padding: 15px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  border-left: 3px solid #5d4037; /* Brown */
+}
+
+.notificacion_descripcion p:nth-of-type(1) {
+  grid-column: 2;
+  grid-row: 1;
+  border-left-color: #e67e22; /* Orange */
+}
+
+.notificacion_descripcion p:nth-of-type(2) {
+  grid-column: 2;
+  grid-row: 2;
+  border-left-color: #27ae60; /* Green */
+}
+
+.notificacion_descripcion strong {
+  color: #5d4037; /* Brown */
+  font-weight: 700;
+  font-size: 18px; /* Header 5 */
+  margin-bottom: 8px;
+  display: block;
+}
+
+.notificacion_descripcion br {
+  margin-bottom: 10px;
+  display: block;
+  content: "";
+}
+
+/* Línea divisoria decorativa (simulando el --- del diseño) */
+.notificacion_descripcion::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 10%,
+    #5d4037 10%,
+    #5d4037 90%,
+    transparent 90%
+  );
+  opacity: 0.3;
+}

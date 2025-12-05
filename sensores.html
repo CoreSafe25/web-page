@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Alertas_Notificaciones</title>
+    <link rel="stylesheet" href="notificacionstyles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="wordmark">
+        <a href="index.html" class="wordmark">CoreSafe</a>
+      </div>
+      <ul>
+        <li><a href="#">Alertas</a></li>
+        <li><a href="PanelAutoridades_Empresa.html">Panel</a></li>
+        <li><a href="reportes-index.html">Reportes</a></li>
+        <li><a href="statsindex.html">Estadísticas</a></li>
+        <li><a href="about_us.html">About us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    <section class="notificaciones_header">
+      <h2>Centro de notificaciones</h2>
+      <label for="opciones">Tipo</label>
+      <select onchange="location.href=this.value">
+        <option value="">-- Selecciona el tipo --</option>
+        <option value="sensores.html">Alerta de sensores</option>
+        <option value="usuarios.html">Alerta de usuarios</option>
+        <option value="autoridades.html">Alerta de autoridades</option>
+      </select>
+    </section>
+    <section class="lista_notificaciones">
+      <div class="notificacion">
+        <p><strong>Fecha:</strong> 08/07/25</p>
+        <p><strong>Prioridad:</strong> alta</p>
+        <p><strong>Tipo:</strong> Derrumbe</p>
+        <p><strong>Tipo alerta:</strong> Sensores</p>
+        <button class="marcar_leido">Marcar como leido</button>
+        <button class="ver_mas" onclick="window.location.href='ver_mas.html'">
+          Ver mas ->
+        </button>
+      </div>
+      <div class="notificacion">
+        <p><strong>Fecha:</strong> 08/07/25</p>
+        <p><strong>Prioridad:</strong>media</p>
+        <p><strong>Tipo:</strong> Grieta tipo 2</p>
+        <p><strong>Tipo alerta:</strong> Sensores</p>
+        <button class="marcar_leido">Marcar como leido</button>
+        <button class="ver_mas" onclick="window.location.href='ver_mas.html'">
+          Ver mas ->
+        </button>
+      </div>
+      <div class="notificacion">
+        <p><strong>Fecha:</strong> 08/07/25</p>
+        <p><strong>Prioridad:</strong> baja</p>
+        <p><strong>Tipo:</strong> Grieta</p>
+        <p><strong>Tipo alerta:</strong> Sensores</p>
+        <button class="marcar_leido">Marcar como leido</button>
+        <button class="ver_mas" onclick="window.location.href='ver_mas.html'">
+          Ver mas ->
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
