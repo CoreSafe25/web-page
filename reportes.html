@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Reportes</title>
+  <link rel="stylesheet" href="reportes.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="wordmark"><a href="index.html" class="wordmark">CoreSafe</a></div>
+    <ul>    
+      <li><a href = "#">Alertas</a></li>
+      <li><a href = "PanelAutoridades_Empresa.html">Panel</a></li>
+      <li><a href = "reportes-index.html">Reportes</a></li>
+      <li><a href = "statsindex.html">Estadísticas</a></li>
+      <li><a href = "about_us.html">About us</a></li>
+      <li><a href = "login.html">Login</a></li>
+    </ul>
+  </nav>
+  <!--Sección Reportes-->
+  <section class="report-container">
+    <h2>Datos del Reporte</h2>
+    <div class="report-box">
+      <form>
+        <div class="input-group">
+          <label for="title">Titulo:</label>
+          <input type="title" id="title" name="title" placeholder="Introduce un titulo" required>          
+        </div>
+        <div class="input-group">
+          <label for="title">Tipo de Problema:</label>
+          <select name="type-problem" id="type-problem">
+            <option value="">--Seleccione un tipo--</option>
+            <option value="Grietas">Grietas</option>
+            <option value="Vibraciones">Vibraciones</option>
+            <option value="Desprendimiento">Desprendimiento</option>
+            <option value="Filtraciones">Filtraciones</option>
+            <option value="Corrosión">Corrosión</option>
+            <option value="Otro">Otro</option>
+          </select>          
+        </div>
+        <div class="input-group">
+          <label for="title">Nivel de Urgencia:</label>
+          <select name="lvl-problem" id="lvl-problem">
+            <option value="">--Seleccione un nivel--</option>
+            <option value="Leve">Leve</option>
+            <option value="Moderado">Moderado</option>
+            <option value="Grave">Grave</option>
+          </select>          
+        </div>
+        <div class="input-group-col">
+          <label for="description">Descripción:</label>
+          <input class="input-col" type="description" id="description" name="description" placeholder="Ingrese una descripción" required>
+        </div>
+        <div class="input-group-col">
+          <label for="multimedia">Evidencia:</label>
+          <input class="input-col" type="multimedia" id="multimedia" name="multimedia" placeholder="Agregue un archivo multimedia" required>
+        </div>
+        <div class="input-group">
+          <label for="direction">Dirección:</label>
+          <input type="direction" id="direction" name="direction" placeholder="Agregue una dirección" required>
+        </div>
+        <div class="button-group">
+          <button type="submit" class="atras">Atras</button>
+          <button type="submit" class="subir">Subir Reporte</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-wordmark">CoreSafe</div>
+    <p>&copy; 2025 CoreSafe. Todos los derechos reservados.</p>
+    <ul>
+      <li><a href = "faq.html">FAQ</a></li>
+      <li><a href = "https://www.termsfeed.com/public/uploads/2021/12/sample-cookies-policy-template.pdf">Cookie Policies</a></li>
+      <li><a href = "https://www.termsfeed.com/public/uploads/2021/12/sample-privacy-policy-template.pdf">Private Policy</a></li>
+      <li><a href = "#">Terms & Conditions</a></li>
+    </ul>
+  </footer>
+  <script src="reportes.js"></script>
+</body>
+</html>
