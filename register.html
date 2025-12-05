@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CoreSafe - Login</title>
-  <link rel="stylesheet" href="login.css">
+  <title>CoreSafe - Registro</title>
+  <link rel="stylesheet" href="register.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Navbar -->
- <nav>
+  <nav>
     <div class="wordmark"><a href="landing.html">CoreSafe</a></div>
     <ul>
       <li><a href="notificaciones.html">Alertas</a></li>
@@ -22,30 +22,28 @@
     </ul>
   </nav>
 
-  <!-- Login / Sign Up -->
+  <!-- Register -->
   <div class="container">
     <div class="form-box">
-      <h2>CoreSafe</h2>
+      <h2>Regístrate</h2>
 
-      <!-- Login Form -->
-      <form id="login-form" class="form active">
-        <input type="email" placeholder="Correo electrónico" required>
-        <input type="password" placeholder="Contraseña" required>
-        <button type="submit">Login</button>
-        <p class="toggle-text"><a href="register.html">¿No tienes cuenta? <span class="toggle-btn" data-target="signup-form">Regístrate</a></span></p>
-      </form>
-
-      <!-- Sign Up Form -->
-      <form id="signup-form" class="form">
+      <form id="signup-form">
         <input type="text" placeholder="Nombre completo" required>
         <input type="email" placeholder="Correo electrónico" required>
         <input type="password" placeholder="Contraseña" required>
-        <button type="submit">Sign Up</button>
-        <p class="toggle-text">¿Ya tienes cuenta? <span class="toggle-btn" data-target="login-form">Login</span></p>
+        <button type="submit">Crear cuenta</button>
+
+        <p class="toggle-text">
+          <a href="index.html">¿Ya tienes una cuenta? Inicia sesión</a>
+        </p>
       </form>
     </div>
   </div>
-<script src="login.js"></script>
 
+  <footer>
+    © 2025 CoreSafe — Sistema de Gestión de Riesgos Edilicios
+  </footer>
+
+  <script src="register.js"></script>
 </body>
 </html>

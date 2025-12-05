@@ -341,3 +341,92 @@ footer ul {
   gap: 2rem;
   margin-top: 1rem;
 }
+
+.bar-chart {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: end;
+  margin-top: 2rem;
+}
+
+.bar-item {
+  text-align: center;
+}
+
+.bar {
+  width: 60px;
+  height: var(--value);
+  background: linear-gradient(180deg, #E67E22, #A85D1B);
+  border-radius: 12px;
+  transition: height 1s ease;
+  animation: grow 1s ease forwards;
+}
+
+@keyframes grow {
+  from { height: 0; }
+  to { height: var(--value); }
+}
+
+.bar-item p {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.donut-chart {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: relative;
+  margin: auto;
+  background: conic-gradient(
+    #E67E22 calc(var(--percent) * 1%),
+    #ddd calc(var(--percent) * 1%)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.donut-chart::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.donut-chart span {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #E67E22;
+}
+
+
+.progress-item {
+  margin: 1rem 0;
+}
+
+.progress-item label {
+  font-weight: 600;
+  color: #555;
+}
+
+.progress-bar {
+  width: var(--value);
+  height: 18px;
+  background: linear-gradient(90deg, #E67E22, #A85D1B);
+  border-radius: 10px;
+  margin-top: 5px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.15);
+  transform-origin: left;
+  animation: growBar 1.2s ease forwards;
+}
+
+@keyframes growBar {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}

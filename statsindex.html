@@ -1,121 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CoreSafe - Panel Autoridades</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-    <div class="wordmark"><a href="index.html" class="wordmark">CoreSafe</a></div>
-    <ul>    
-      <li><a href = "#">Alertas</a></li>
-      <li><a href = "PanelAutoridades_Empresa.html">Panel</a></li>
-      <li><a href = "reportes-index.html">Reportes</a></li>
-      <li><a href = "statsindex.html">Estadísticas</a></li>
-      <li><a href = "about_us.html">About us</a></li>
-      <li><a href = "login.html">Login</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoreSafe - Panel Estadísticas</title>
+
+  <link rel="stylesheet" href="panel-stats.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="wordmark"><a href="landing.html">CoreSafe</a></div>
+    <ul>
+      <li><a href="notificaciones.html">Alertas</a></li>
+      <li><a href="PanelAutoridades_Empresa.html">Panel</a></li>
+      <li><a href="reportes-index.html">Reportes</a></li>
+      <li><a href="statsindex.html">Estadísticas</a></li>
+      <li><a href="about_us.html">About us</a></li>
+      <li><a href="index.html">Login</a></li>
     </ul>
   </nav>
-    </header>
-    <div class="panel-title">ESTADISTICAS</div>
-    <div class="container">
-      <div class="photos">
-        <img src="img/graphic1.png" /><img src="img/graphic2.png" />
-      </div>
 
-      <!-- LISTADO DE REPORTES -->
-      <div>
-        <div class="panel-title2">CALIFICANOS</div>
-        <div class="starbig">
-          <img src="img/stars.png" />
+  <!-- TITULO -->
+  <section class="title-section">
+    <h1>Estadísticas Generales</h1>
+    <p>Visualiza el desempeño de CoreSafe según el uso, opiniones y reportes recibidos.</p>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="main-container">
+
+    <!-- BLOQUE DE GRÁFICOS -->
+    <section class="stats-section">
+      <h2>Indicadores Relevantes</h2>
+
+      <div class="charts">
+        <div class="chart-card">
+          <img src="img/graphic1.png" alt="Gráfico 1">
         </div>
 
-        <!-- LISTADO DE REPORTES -->
-        <div>
-          <h2>Opiniones</h2>
-          <div class="stars">
-            <img src="img/rating.png" />
-            <h2>3.5K</h2>
-          </div>
-          <div class="report-list">
-            <div class="reseña-card">
-              <h4>anonimo</h4>
-              <div class="meta">
-                Excelente, gracias a esa app he logrado que reparen un daño en
-                mi colegio que pudo haber resultado en una tragedia.
-              </div>
-              <div class="icons">
-                <span>🗨️ 25 Comentarios</span
-                ><span>
-                  <div class="starating">
-                    <img src="img/000.png" />
-                  </div>
-                </span>
-              </div>
-            </div>
-            <div class="reseña-card">
-              <h4>anonimo</h4>
-              <div class="meta">
-                Bastante buena, puedo reportar grietas en el centro comercial de
-                por donde vivo
-              </div>
-              <div class="icons">
-                <span>🗨️ 4 respuestas</span
-                ><span>
-                  <div class="starating">
-                    <img src="img/002.png" />
-                  </div>
-                </span>
-              </div>
-            </div>
-            <div class="reseña-card">
-              <h4>anonimo</h4>
-              <div class="meta">No me gusta la interfaz, no la recomiendo.</div>
-              <div class="icons">
-                <span>🗨️ 1 respuestas</span
-                ><span>
-                  <div class="starating">
-                    <img src="img/004.png" />
-                  </div>
-                </span>
-              </div>
-            </div>
-            <div class="reseña-card">
-              <h4>anonimo</h4>
-              <div class="meta">
-                Me encantaria que se pudiese reportar mas clases de daños en
-                estructuras, fuera de eso es una app decente.
-              </div>
-              <div class="icons">
-                <span>🗨️ 1 respuestas</span
-                ><span>
-                  <div class="starating">
-                    <img src="img/002.png" />
-                  </div>
-                </span>
-              </div>
-            </div>
-            <div class="reseña-card">
-              <h4>anonimo</h4>
-              <div class="meta">
-                Gracias a CoreSafe hemos logrado enterarnos a tiempo de grietas
-                que pudieron resultar en desprendimientos.
-              </div>
-              <div class="icons">
-                <span>🗨️ 3 respuestas</span
-                ><span>
-                  <div class="starating">
-                    <img src="img/000.png" />
-                  </div>
-                </span>
-              </div>
-            </div>
-          </div>
+        <div class="chart-card">
+          <img src="img/graphic2.png" alt="Gráfico 2">
         </div>
       </div>
+    </section>
+
+    <!-- SECCIÓN DE CALIFICACIÓN -->
+    <section class="rating-section">
+      <h2>Califícanos</h2>
+      <img src="img/stars.png" class="rating-stars">
+
+      <div class="rating-summary">
+        <img src="img/rating.png" alt="Promedio rating">
+        <h3>3.5k Opiniones</h3>
+      </div>
+    </section>
+
+    <!-- RESEÑAS -->
+    <section class="reviews-section">
+      <h2>Opiniones de Usuarios</h2>
+
+      <div class="reviews-list">
+
+        <!-- Tarjeta de reseña -->
+        <div class="review-card">
+          <div class="review-header">
+            <h4>Anónimo</h4>
+            <img src="img/000.png" class="review-rating">
+          </div>
+          <p>
+            Excelente, gracias a la app lograron reparar un daño en mi colegio que pudo haber terminado en tragedia.
+          </p>
+          <span class="comments">🗨️ 25 comentarios</span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <h4>Anónimo</h4>
+            <img src="img/002.png" class="review-rating">
+          </div>
+          <p>
+            Muy buena, puedo reportar grietas en el centro comercial donde vivo.
+          </p>
+          <span class="comments">🗨️ 4 respuestas</span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <h4>Anónimo</h4>
+            <img src="img/004.png" class="review-rating">
+          </div>
+          <p>No me gusta la interfaz actual, no la recomiendo.</p>
+          <span class="comments">🗨️ 1 respuesta</span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <h4>Anónimo</h4>
+            <img src="img/002.png" class="review-rating">
+          </div>
+          <p>
+            Me gustaría que se puedan reportar más tipos de daños en estructuras. Fuera de eso, es decente.
+          </p>
+          <span class="comments">🗨️ 1 respuesta</span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <h4>Anónimo</h4>
+            <img src="img/000.png" class="review-rating">
+          </div>
+          <p>
+            Gracias a CoreSafe pudimos enterarnos a tiempo de grietas críticas antes de que empeoraran.
+          </p>
+          <span class="comments">🗨️ 3 respuestas</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: DEJA TU OPINIÓN -->
+<section class="add-review-section">
+  <h2>Deja tu Opinión</h2>
+  <p>Tu experiencia nos ayuda a mejorar la seguridad en más instituciones. 😊</p>
+
+  <form class="review-form">
+    
+    <label>Tu nombre (opcional)</label>
+    <input type="text" placeholder="Escribe tu nombre o déjalo en blanco">
+
+    <label>Calificación</label>
+    <div class="stars-selector">
+      <span data-value="1">★</span>
+      <span data-value="2">★</span>
+      <span data-value="3">★</span>
+      <span data-value="4">★</span>
+      <span data-value="5">★</span>
     </div>
-  </body>
+
+    <label>Comentario</label>
+    <textarea placeholder="Escribe tu experiencia con CoreSafe..." required></textarea>
+
+    <button type="submit" class="submit-btn">Enviar Opinión</button>
+
+    <p class="submit-msg" style="display: none;">
+      ✔ ¡Gracias por tu opinión! Nos ayuda a mejorar.
+    </p>
+
+  </form>
+</section>
+
+
+  </div>
+
+</body>
+<script src="stats.js"></script>
 </html>
