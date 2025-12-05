@@ -6,6 +6,10 @@
 // Seleccionamos el formulario
 const form = document.querySelector("form");
 
+const uploadArea = document.getElementById("uploadArea");
+const fileInput = document.getElementById("fileInput");
+const preview = document.getElementById("preview");
+
 // Evento principal
 form.addEventListener("submit", function (e) {
   e.preventDefault(); // evita recargar la página
@@ -57,3 +61,40 @@ evidenciaInput.addEventListener("change", function () {
     alert("📎 Archivo seleccionado correctamente.");
   }
 });
+
+// Abrir selector al hacer click
+uploadArea.addEventListener("click", () => fileInput.click());
+
+// Cargar imagen seleccionada
+fileInput.addEventListener("change", () => {
+  const file = fileInput.files[0];
+  if (file) showPreview(file);
+});
+
+// Drag & Drop
+uploadArea.addEventListener("dragover", (e) => {
+  e.preventDefault();
+  uploadArea.classList.add("dragover");
+});
+
+uploadArea.addEventListener("dragleave", () => {
+  uploadArea.classList.remove("dragover");
+});
+
+uploadArea.addEventListener("drop", (e) => {
+  e.preventDefault();
+  uploadArea.classList.remove("dragover");
+
+  const file = e.dataTransfer.files[0];
+  if (file) showPreview(file);
+});
+
+// Función para mostrar la imagen
+function showPreview(file) {
+  const reader = new FileReader();
+  reader.onload = () => {
+    preview.src = reader.result;
+    preview.style.display = "block";
+  };
+  reader.readAsDataURL(file);
+}
