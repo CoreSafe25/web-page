@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Historial de Alertas</title>
+    <link rel="stylesheet" href="historial-alertas.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <div class="wordmark"><a href="index.html">CoreSafe</a></div>
+      <ul>
+        <li><a href="#">Alertas</a></li>
+        <li><a href="PanelAutoridades_Empresa.html">Panel</a></li>
+        <li><a href="reportes-index.html">Reportes</a></li>
+        <li><a href="statsindex.html">Estadísticas</a></li>
+        <li><a href="about_us.html">About us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="header-container">
+      <div class="left-panel">
+        <h2>Historial de alertas</h2>
+        <p class="volver" onclick="window.location.href='notificacion.html'">
+          ← Volver
+        </p>
+      </div>
+
+      <!-- Contenedor del botón y dropdown -->
+      <div class="filtro-wrapper">
+        <div class="filtro-header" onclick="toggleFiltro()">
+          Filtro de búsqueda ▼
+        </div>
+
+        <!-- Filtro flotante -->
+        <div class="filtro-box" id="filtroBox">
+          <input type="text" id="f-key" placeholder="Palabra clave" />
+
+          <select id="f-tipo">
+            <option value="">Tipo</option>
+            <option value="Derrumbe">Derrumbe</option>
+            <option value="Grieta tipo 2">Grieta tipo 2</option>
+            <option value="Grieta">Grieta</option>
+          </select>
+
+          <input type="date" id="f-antes" />
+          <input type="date" id="f-despues" />
+          <input type="date" id="f-exacta" />
+
+          <button class="btn-filtrar" onclick="aplicarFiltros()">
+            Aplicar
+          </button>
+          <button class="btn-limpiar" onclick="limpiarFiltros()">
+            Limpiar
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- LISTA DE ALERTAS -->
+    <section class="lista_notificaciones">
+      <div class="notificacion" data-fecha="2025-07-08" data-tipo="Derrumbe">
+        <p><strong>Fecha:</strong> 08/07/25</p>
+        <p><strong>Prioridad:</strong> Alta</p>
+        <p><strong>Tipo:</strong> Derrumbe</p>
+        <p><strong>Tipo alerta:</strong> Autoridades</p>
+      </div>
+
+      <div
+        class="notificacion"
+        data-fecha="2025-07-05"
+        data-tipo="Grieta tipo 2"
+      >
+        <p><strong>Fecha:</strong> 05/07/25</p>
+        <p><strong>Prioridad:</strong> Media</p>
+        <p><strong>Tipo:</strong> Grieta tipo 2</p>
+        <p><strong>Tipo alerta:</strong> Usuarios</p>
+      </div>
+
+      <div class="notificacion" data-fecha="2025-07-02" data-tipo="Grieta">
+        <p><strong>Fecha:</strong> 02/07/25</p>
+        <p><strong>Prioridad:</strong> Baja</p>
+        <p><strong>Tipo:</strong> Grieta</p>
+        <p><strong>Tipo alerta:</strong> Sensores</p>
+      </div>
+    </section>
+
+    <script src="historial-alertas.js"></script>
+  </body>
+</html>
