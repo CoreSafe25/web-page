@@ -255,3 +255,31 @@ nav ul li a:hover {
   color: #64B13E;
   font-weight: 600;
 }
+
+
+/* Footer */
+footer {
+  background-color: #504037;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer .footer-wordmark {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 30px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
