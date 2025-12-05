@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CoreSafe - Panel Autoridades</title>
+
+  <link rel="stylesheet" href="reportes-style.css">
+
+</head>
+
+
+
+<body>
+
+
+
+  <!-- =============================== -->
+
+  <!--            NAVBAR               -->
+
+  <!-- =============================== -->
+
+  <header>
+
+    <nav>
+
+      <div class="wordmark"><a href="landing.html">CoreSafe</a></div>
+
+      <ul>
+
+        <li><a href="notificaciones.html">Alertas</a></li>
+
+        <li><a href="PanelAutoridades_Empresa.html">Panel</a></li>
+
+        <li><a href="reportes-index.html">Reportes</a></li>
+
+        <li><a href="statsindex.html">Estadísticas</a></li>
+
+        <li><a href="about_us.html">About us</a></li>
+
+        <li><a href="index.html">Login</a></li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =============================== -->
+
+  <!--         TITULO + BOTON          -->
+
+  <!-- =============================== -->
+
+  <div class="panel-title">PANEL AUTORIDADES / EMPRESA</div>
+
+
+
+
+
+  <!-- =============================== -->
+
+  <!--           CONTENIDO             -->
+
+  <!-- =============================== -->
+
+  <div class="container">
+
+
+
+    <!-- ====================== -->
+
+    <!--    LISTA DE REPORTES   -->
+
+    <!-- ====================== -->
+
+    <section class="list-section">
+
+      <div class="list-header">
+        <h2>Listado de reportes</h2>
+        <div class="filter-controls">
+          <!-- Campo de búsqueda -->
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Buscar reportes...">
+            <span class="search-icon">🔍</span>
+          </div>
+          <!-- Botón de filtro -->
+          <button id="filterBtn" class="filter-btn">
+            <span class="filter-icon">⚙️</span> Filtros
+          </button>
+        </div>
+      </div>
+
+
+
+      <div class="report-list">
+
+
+
+        <!-- CARD 1 -->
+
+        <div class="report-card"
+
+             data-id="r1"
+
+             data-title="Grietas en construcción"
+
+             data-date="2025-10-10"
+
+             data-urgency="ALTA"
+
+             data-location="San Miguel, Lima"
+
+             data-description="Grieta estructural en unión de techo y pared. Riesgo de desprendimiento."
+
+             data-img1="assets/grieta1.jpg"
+
+             data-img2="assets/grieta2.jpg"
+
+             data-comments="Se observa un daño serio que debe ser atendido de inmediato.">
+
+
+
+          <h3>Grietas en construcción</h3>
+
+          <div class="meta">
+
+            <span class="date">📅 2025-10-10</span>
+
+              <span class="urgency urgency-high">ALTA</span>
+
+              <span class="card-status status-active">Activo</span>
+
+          </div>
+
+          <div class="icons">
+
+            <span class="comment-icon">🗨️ <span class="comment-count">12</span></span>
+
+            <span class="like-container">
+
+              <span class="like-button" data-report-id="r1">🤍</span> <span class="like-count">98</span>
+
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- CARD 2 -->
+
+        <div class="report-card"
+
+             data-id="r2"
+
+             data-title="Techo goteando"
+
+             data-date="2025-10-11"
+
+             data-urgency="MEDIA"
+
+             data-location="Miraflores"
+
+             data-description="Filtro de agua en el techo del pasillo principal."
+
+             data-img1="assets/goteo1.jpg"
+
+             data-img2="assets/goteo2.jpg"
+
+             data-comments="Esto puede empeorar si no se revisa.">
+
+
+
+          <h3>Techo goteando</h3>
+
+          <div class="meta">
+
+            <span class="date">📅 2025-10-11</span>
+
+              <span class="urgency urgency-medium">MEDIA</span>
+
+              <span class="card-status status-active">Activo</span>
+
+          </div>
+
+          <div class="icons">
+
+            <span class="comment-icon">🗨️ <span class="comment-count">4</span></span>
+
+            <span class="like-container">
+
+              <span class="like-button" data-report-id="r2">🤍</span> <span class="like-count">27</span>
+
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- CARD 3 -->
+
+        <div class="report-card"
+
+             data-title="Pared húmeda"
+
+             data-date="2025-10-12"
+
+             data-urgency="MEDIA"
+
+             data-location="La Molina"
+
+             data-description="Humedad en la pared cercana a tuberías internas."
+
+             data-img1="assets/humedad1.jpg"
+
+             data-img2="assets/humedad2.jpg"
+
+             data-comments="La humedad está expandiéndose lentamente.">
+
+
+
+          <h3>Pared húmeda</h3>
+
+          <div class="meta">
+
+            <span class="date">📅 2025-10-12</span>
+
+              <span class="urgency urgency-medium">MEDIA</span>
+
+              <span class="card-status status-active">Activo</span>
+
+          </div>
+
+          <div class="icons">
+
+            <span class="comment-icon">🗨️ <span class="comment-count">7</span></span>
+
+            <span class="like-container">
+
+              <span class="like-button" data-report-id="r3">🤍</span> <span class="like-count">31</span>
+
+            </span>
+
+          </div>
+
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="report-card"
+             data-id="r4"
+             data-title="Puerta dañada"
+             data-date="2025-10-13"
+             data-urgency="BAJA"
+             data-location="Pueblo Libre"
+             data-description="Puerta de entrada con bisagras rotas."
+             data-img1="assets/puerta1.jpg"
+             data-img2="assets/puerta2.jpg"
+             data-comments="Necesita reparación pero no es urgente.">
+
+          <h3>Puerta dañada</h3>
+          <div class="meta">
+            <span class="date">📅 2025-10-13</span>
+            <span class="urgency urgency-low">BAJA</span>
+            <span class="card-status status-active">Activo</span>
+          </div>
+          <div class="icons">
+            <span class="comment-icon">🗨️ <span class="comment-count">5</span></span>
+            <span class="like-container">
+              <span class="like-button" data-report-id="r4">🤍</span> <span class="like-count">19</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="report-card"
+             data-id="r5"
+             data-title="Tuberías con fugas"
+             data-date="2025-10-14"
+             data-urgency="ALTA"
+             data-location="San Borja"
+             data-description="Fuga de agua en tuberías del sótano."
+             data-img1="assets/tuberia1.jpg"
+             data-img2="assets/tuberia2.jpg"
+             data-comments="Riesgo de inundación, requiere atención inmediata.">
+
+          <h3>Tuberías con fugas</h3>
+          <div class="meta">
+            <span class="date">📅 2025-10-14</span>
+            <span class="urgency urgency-high">ALTA</span>
+            <span class="card-status status-active">Activo</span>
+          </div>
+          <div class="icons">
+            <span class="comment-icon">🗨️ <span class="comment-count">14</span></span>
+            <span class="like-container">
+              <span class="like-button" data-report-id="r5">🤍</span> <span class="like-count">56</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="report-card"
+             data-id="r6"
+             data-title="Escaleras resbaladizas"
+             data-date="2025-10-15"
+             data-urgency="MEDIA"
+             data-location="Lince"
+             data-description="Escaleras principales con material antideslizante desgastado."
+             data-img1="assets/escalera1.jpg"
+             data-img2="assets/escalera2.jpg"
+             data-comments="Peligro de accidentes por resbalones.">
+
+          <h3>Escaleras resbaladizas</h3>
+          <div class="meta">
+            <span class="date">📅 2025-10-15</span>
+            <span class="urgency urgency-medium">MEDIA</span>
+            <span class="card-status status-active">Activo</span>
+          </div>
+          <div class="icons">
+            <span class="comment-icon">🗨️ <span class="comment-count">9</span></span>
+            <span class="like-container">
+              <span class="like-button" data-report-id="r6">🤍</span> <span class="like-count">44</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- CARD 7 -->
+        <div class="report-card"
+             data-id="r7"
+             data-title="Iluminación deficiente"
+             data-date="2025-10-16"
+             data-urgency="MEDIA"
+             data-location="Jesús María"
+             data-description="Luminarias apagadas en el pasillo norte."
+             data-img1="assets/luz1.jpg"
+             data-img2="assets/luz2.jpg"
+             data-comments="Necesita reemplazo de focos y revisión del circuito.">
+
+          <h3>Iluminación deficiente</h3>
+          <div class="meta">
+            <span class="date">📅 2025-10-16</span>
+            <span class="urgency urgency-medium">MEDIA</span>
+            <span class="card-status status-active">Activo</span>
+          </div>
+          <div class="icons">
+            <span class="comment-icon">🗨️ <span class="comment-count">6</span></span>
+            <span class="like-container">
+              <span class="like-button" data-report-id="r7">🤍</span> <span class="like-count">22</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- CARD 8 -->
+        <div class="report-card"
+             data-id="r8"
+             data-title="Oxidación en columnas"
+             data-date="2025-10-17"
+             data-urgency="ALTA"
+             data-location="Chaclacayo"
+             data-description="Columnas estructurales con oxidación avanzada."
+             data-img1="assets/oxidacion1.jpg"
+             data-img2="assets/oxidacion2.jpg"
+             data-comments="Riesgo estructural, requiere intervención profesional.">
+
+          <h3>Oxidación en columnas</h3>
+          <div class="meta">
+            <span class="date">📅 2025-10-17</span>
+            <span class="urgency urgency-high">ALTA</span>
+            <span class="card-status status-active">Activo</span>
+          </div>
+          <div class="icons">
+            <span class="comment-icon">🗨️ <span class="comment-count">11</span></span>
+            <span class="like-container">
+              <span class="like-button" data-report-id="r8">🤍</span> <span class="like-count">67</span>
+            </span>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ====================== -->
+
+    <!--        DETALLE          -->
+
+    <!-- ====================== -->
+
+    <aside class="detail" id="detailView">
+
+
+
+      <div class="detail-header">
+
+        <h3 id="detailTitle">Seleccione un reporte</h3>
+
+        <span class="status status-active">Activo</span>
+
+      </div>
+
+
+
+      <div class="state-control">
+
+        <label for="detailState"><strong>Estado:</strong></label>
+
+        <select id="detailState">
+
+          <option value="Activo">Activo</option>
+
+          <option value="En revisión">En revisión</option>
+
+          <option value="Resuelto">Resuelto</option>
+
+        </select>
+
+        <button id="btnChangeState" class="btn">Cambiar</button>
+
+      </div>
+
+
+
+      <div class="meta">
+
+        <strong>Urgencia:</strong> <span id="detailUrgency" class="urgency">—</span><br>
+
+        <strong>Fecha:</strong> <span id="detailDate">—</span><br>
+
+        <strong>Ubicación:</strong> <span id="detailLocation">—</span><br>
+
+        <strong>Inspector asignado:</strong> <span id="detailInspector">No asignado</span><br>
+
+        <strong>Validación:</strong> <span id="detailValidation">Pendiente</span>
+
+      </div>
+
+
+
+      <div class="likes">
+
+        <span class="like-button-detail" id="likeButtonDetail">🤍</span>
+
+        <span id="detailLikes">0</span> Likes
+
+        <button id="btnApply" class="btn btn-apply">Aplicar / Contactar</button>
+
+      </div>
+
+
+
+      <h4 class="section-title">Descripción</h4>
+
+      <p id="detailDescription">Seleccione un reporte para ver los detalles.</p>
+
+
+
+      <h4 class="section-title">Fotos / Evidencia</h4>
+
+      <div class="photos">
+
+        <img id="img1" src="https://via.placeholder.com/150">
+
+        <img id="img2" src="https://via.placeholder.com/150">
+
+      </div>
+
+
+
+      <h4 class="section-title">Comentarios y Respuestas</h4>
+
+      <div id="commentsList" class="comments-list">
+
+        <!-- Los comentarios se renderizarán dinámicamente aquí -->
+
+      </div>
+
+      <!-- Nuevo: Área para responder comentarios -->
+      <div id="replySection" class="reply-section" style="display: none;">
+        <div class="reply-header">
+          <span id="replyToUser"></span>
+          <button id="cancelReply" class="btn btn-small">✕ Cancelar</button>
+        </div>
+        <div class="reply-input">
+          <textarea id="replyText" placeholder="Escribe tu respuesta..." rows="3"></textarea>
+          <button id="submitReply" class="btn">Responder</button>
+        </div>
+      </div>
+
+      <div class="comment-box" style="display: none;">
+
+        <div class="comment-user">Ciudadano</div>
+
+        <div id="detailComments">—</div>
+
+      </div>
+
+
+
+    </aside>
+
+
+
+    <!-- Modal pequeño de aplicado -->
+
+    <div id="appliedModal" class="applied-modal" aria-hidden="true">
+
+      <div class="applied-modal-content" role="dialog" aria-label="Aplicado">
+
+        <div class="applied-icon">✔</div>
+
+        <div class="applied-text">APLICADO</div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Modal para confirmar 'Resuelto' y dejar nota -->
+
+    <div id="resolveModal" class="resolve-modal" aria-hidden="true">
+
+      <div class="resolve-modal-content" role="dialog" aria-label="Confirmar resolución">
+
+        <h4>Confirmar cambio a <strong>Resuelto</strong></h4>
+
+        <p>Deje una nota breve con la solución (recomendado):</p>
+
+        <textarea id="resolveNote" rows="4" placeholder="Breve nota de la solución..."></textarea>
+
+        <div class="resolve-actions">
+
+          <button id="btnConfirmResolve" class="btn">Confirmar</button>
+
+          <button id="btnCancelResolve" class="btn">Cancelar</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Modal para filtros -->
+    <div id="filterModal" class="filter-modal" aria-hidden="true">
+      <div class="filter-modal-content" role="dialog" aria-label="Filtros de reportes">
+        <div class="filter-modal-header">
+          <h3>Filtrar Reportes</h3>
+          <button id="closeFilterModal" class="close-filter-btn">✕</button>
+        </div>
+        
+        <div class="filter-section">
+          <h4>Por Estado</h4>
+          <div class="filter-options">
+            <label class="filter-checkbox">
+              <input type="checkbox" class="filter-status" value="Activo" checked>
+              <span class="checkmark"></span>
+              Activo
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" class="filter-status" value="En revisión" checked>
+              <span class="checkmark"></span>
+              En revisión
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" class="filter-status" value="Resuelto" checked>
+              <span class="checkmark"></span>
+              Resuelto
+            </label>
+          </div>
+        </div>
+        
+        <div class="filter-section">
+          <h4>Por Urgencia</h4>
+          <div class="filter-options">
+            <label class="filter-checkbox">
+              <input type="checkbox" class="filter-urgency" value="ALTA" checked>
+              <span class="checkmark"></span>
+              <span class="urgency urgency-high">ALTA</span>
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" class="filter-urgency" value="MEDIA" checked>
+              <span class="checkmark"></span>
+              <span class="urgency urgency-medium">MEDIA</span>
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" class="filter-urgency" value="BAJA" checked>
+              <span class="checkmark"></span>
+              <span class="urgency urgency-low">BAJA</span>
+            </label>
+          </div>
+        </div>
+        
+        <div class="filter-section">
+          <h4>Por Ubicación</h4>
+          <select id="filterLocation" class="filter-select">
+            <option value="">Todas las ubicaciones</option>
+            <option value="San Miguel">San Miguel</option>
+            <option value="Miraflores">Miraflores</option>
+            <option value="La Molina">La Molina</option>
+            <option value="Pueblo Libre">Pueblo Libre</option>
+            <option value="San Borja">San Borja</option>
+            <option value="Lince">Lince</option>
+            <option value="Jesús María">Jesús María</option>
+            <option value="Chaclacayo">Chaclacayo</option>
+          </select>
+        </div>
+        
+        <div class="filter-section">
+          <h4>Por Fecha</h4>
+          <div class="date-filters">
+            <div class="date-input">
+              <label for="filterDateFrom">Desde:</label>
+              <input type="date" id="filterDateFrom" class="filter-date">
+            </div>
+            <div class="date-input">
+              <label for="filterDateTo">Hasta:</label>
+              <input type="date" id="filterDateTo" class="filter-date">
+            </div>
+          </div>
+        </div>
+        
+        <div class="filter-actions">
+          <button id="applyFilters" class="btn">Aplicar Filtros</button>
+          <button id="resetFilters" class="btn btn-secondary">Restablecer</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- =============================== -->
+
+  <!--             FOOTER              -->
+
+  <!-- =============================== -->
+
+  <footer>
+
+    <div class="footer-wordmark">CoreSafe</div>
+
+    <p>&copy; 2025 CoreSafe. Todos los derechos reservados.</p>
+
+    <ul>
+
+      <li><a href="faq.html">FAQ</a></li>
+
+      <li><a href="https://www.termsfeed.com/public/uploads/2021/12/sample-cookies-policy-template.pdf">Cookie Policies</a></li>
+
+      <li><a href="https://www.termsfeed.com/public/uploads/2021/12/sample-privacy-policy-template.pdf">Private Policy</a></li>
+
+      <li><a href="#">Terms & Conditions</a></li>
+
+    </ul>
+
+  </footer>
+
+
+
+  <!-- JS DINÁMICO -->
+
+  <script src="panel.js"></script>
+
+
+
+</body>
+
+</html>
