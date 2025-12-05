@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoreSafe - Nueva alerta</title>
+  <link rel="stylesheet" href="nueva-alerta.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="wordmark"><a href="index.html">CoreSafe</a></div>
+    <ul>
+      <li><a href="notificacion.html">Alertas</a></li>
+      <li><a href="autoridad.html">Panel</a></li>
+      <li><a href="reportes-index.html">Reportes</a></li>
+      <li><a href="statsindex.html">Estadísticas</a></li>
+      <li><a href="about_us.html">About us</a></li>
+      <li><a href="perfil.html">Perfil</a></li>
+    </ul>
+  </nav>
+
+  <main class="form-container">
+
+    <h2>Nueva alerta</h2>
+
+    <label>Mensaje:</label>
+    <textarea id="msg" maxlength="250"></textarea>
+    <div class="contador" id="count250">0/250</div>
+
+    <label>Nivel de Riesgo:</label>
+    <div class="select-wrapper">
+      <select>
+        <option value="">Seleccione</option>
+        <option>Bajo</option>
+        <option>Medio</option>
+        <option>Alto</option>
+      </select>
+    </div>
+
+    <label>Zona afectada:</label>
+    <textarea id="zona" maxlength="100"></textarea>
+    <div class="contador" id="count100">0/100</div>
+
+    <button class="btn-enviar">EMITIR ALERTA</button>
+
+  </main>
+
+  <footer>
+    <div class="footer-wordmark">CoreSafe</div>
+    <p>&copy; 2025 CoreSafe. Todos los derechos reservados.</p>
+    <ul>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="https://www.termsfeed.com/public/uploads/2021/12/sample-cookies-policy-template.pdf">Cookie Policies</a></li>
+      <li><a href="https://www.termsfeed.com/public/uploads/2021/12/sample-privacy-policy-template.pdf">Private Policy</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+    </ul>
+  </footer>
+
+  <script src="newAlerta.js"></script>
+</body>
+</html>

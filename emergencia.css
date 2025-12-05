@@ -1,0 +1,112 @@
+:root {
+  --brown: #593A2C;
+  --orange: #F28A1C;
+  --green: #20B04F;
+  --gray: #DDDDDD;
+  --radius: 1.2rem;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #fff;
+}
+
+/* NAVBAR */
+nav {
+  background: var(--brown);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .wordmark a {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul a {
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+/* CONTENIDO */
+.alerta-wrapper {
+  padding: 2rem;
+  max-width: 45rem;
+  margin: auto;
+}
+
+.popup-emergencia {
+  background: var(--orange);
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  margin-top: 3rem;
+  position: relative;
+  text-align: center;
+}
+
+.popup-emergencia h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.btn-emitir {
+  background: var(--green);
+  color: #fff;
+  padding: 1.2rem 2rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  background: var(--brown);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-top: 5rem;
+}
+
+footer .footer-wordmark {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+footer ul li a {
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
