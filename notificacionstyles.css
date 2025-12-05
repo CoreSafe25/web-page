@@ -1,60 +1,52 @@
+/* Reset y fuentes */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background-color: #e0e0e0; /* Gray */
-  color: #5d4037; /* Brown */
   line-height: 1.6;
-  padding-bottom: 40px;
+  color: #333;
 }
 
-/* Estilos de navegación */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
 nav {
+  position: sticky;
+  z-index: 1000;
+    top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #5d4037; /* White */
-  padding: 15px 30px;
-  box-shadow: 0 2px 10px white; /* Brown con transparencia */
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  padding: 1rem 2rem;
+  background-color: #504037;
+  color: #fff;
 }
 
-nav .wordmark a {
-  text-decoration: none;
-  color: #e67e22; /* Orange */
-  font-size: 28px; /* Header 2 */
-  font-weight: 700;
-  letter-spacing: -0.5px;
+nav .wordmark {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 nav ul {
-  display: flex;
   list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
 nav ul li {
-  margin-left: 25px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: white; /* Brown */
-  font-weight: 500;
-  font-size: 16px; /* Text */
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-  background-color: #e67e22; /* Orange */
-  color: #ffffff; /* White */
+nav ul li:hover {
+  text-decoration: underline;
 }
 
 /* Encabezado del centro de notificaciones */

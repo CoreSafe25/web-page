@@ -1,109 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CoreSafe - Perfil de Usuario</title>
-    <link rel="stylesheet" href="perfil.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoreSafe - Perfil de Usuario</title>
+  <link rel="stylesheet" href="perfil.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
 
-  <body>
-    <header>
-      <h2>CoreSafe</h2>
-      <nav>
-        <a href="#">Alertas</a>
-        <a href="#">Panel</a>
-        <a href="#">Reportes</a>
-        <a href="#">Estadísticas</a>
-      </nav>
-      <div class="user-icon"></div>
-    </header>
+<body>
 
-    <!-- Tarjeta principal -->
-    <div class="card">
-      <div class="avatar"></div>
-      <div>
-        <h3>Valeria Ramos</h3>
-        <p>valeria.ramos@gmail.com</p>
+  <!-- Navbar -->
+  <nav>
+    <div class="wordmark"><a href="index.html">CoreSafe</a></div>
+    <ul>
+      <li><a href="notificacion.html">Alertas</a></li>
+      <li><a href="autoridad.html">Panel</a></li>
+      <li><a href="reportes-index.html">Reportes</a></li>
+      <li><a href="statsindex.html">Estadísticas</a></li>
+      <li><a href="about_us.html">About us</a></li>
+      <li><a href = "perfil.html">Perfil</a></li>
+    </ul>
+  </nav>
 
+
+  <!-- PERFIL SUPERIOR -->
+  <section class="profile-card">
+    <div class="avatar" style="background-image: url('assets/user-default.png');"></div>
+    <div class="profile-info">
+      <h3>Valeria Ramos</h3>
+      <p class="email">valeria.ramos@gmail.com</p>
+
+      <div class="btn-group">
         <button class="btn">Editar Perfil</button>
         <button class="btn">Cambiar Contraseña</button>
         <button class="btn">Configuración</button>
       </div>
     </div>
+  </section>
 
-    <!-- Editar perfil -->
-    <div class="content-section">
-      <h2>Editar Perfil</h2>
-      <div class="profile-edit-body">
-        <div>
-          <div class="form-group">
-            <label>Nombre completo</label><br />
-            <input type="text" />
-          </div>
+  <!-- EDITAR PERFIL -->
+  <section class="content-section">
+    <h2>Editar Perfil</h2>
 
-          <div class="form-group">
-            <label>Correo electrónico</label><br />
-            <input type="email" />
-          </div>
-
-          <div class="form-group">
-            <label>Teléfono</label><br />
-            <input type="text" />
-          </div>
+    <div class="profile-edit-body">
+      <div class="form-left">
+        <div class="form-group">
+          <label>Nombre completo</label><br />
+          <input type="text" placeholder="Ingrese nombre completo" />
         </div>
 
-        <div class="photo-upload">
-          <div class="avatar"></div>
-          <button class="btn">Subir nuevo archivo</button>
-          <button class="btn">Eliminar Foto</button>
+        <div class="form-group">
+          <label>Correo electrónico</label><br />
+          <input type="email" placeholder="correo@ejemplo.com" />
+        </div>
+
+        <div class="form-group">
+          <label>Teléfono</label><br />
+          <input type="text" placeholder="+51 999 999 999" />
         </div>
       </div>
-    </div>
 
-    <!-- Preferencias y Notificaciones -->
-    <div class="content-section">
-      <h2>Preferencias y Notificaciones</h2>
-
-      <div class="notif-container">
-        <div>
-          <div class="notif-card">
-            <label>
-              <input type="checkbox" checked />
-              Notificaciones Push
-            </label>
-          </div>
-
-          <div class="notif-card">
-            <label>
-              <input type="checkbox" />
-              Notificaciones por Email
-            </label>
-          </div>
-
-          <div class="notif-card">
-            <label>
-              <input type="checkbox" checked />
-              Alertas de Emergencia
-            </label>
-          </div>
-        </div>
-
-        <div>
-          <div class="zone-card">San Isidro - Lima</div>
-          <div class="zone-card">Miraflores - Lima</div>
-          <div class="zone-card">Lince - Lima</div>
-        </div>
+      <div class="photo-upload">
+        <div class="avatar avatar-large" style="background-image: url('assets/user-default.png');"></div>
+        <button class="btn">Subir nueva foto</button>
+        <button class="btn remove">Eliminar Foto</button>
       </div>
     </div>
+  </section>
 
-    <!-- Seguridad y sesiones -->
-    <div class="content-section">
-      <h2>Seguridad y Sesiones</h2>
+  <!-- PREFERENCIAS -->
+  <section class="content-section">
+    <h2>Preferencias y Notificaciones</h2>
 
-      <div class="zone-card">Iphone 17 Pro Max — 28/05/2025 — 10:30 AM</div>
-      <div class="zone-card">Windows 11 Home — 28/05/2025 — 12:00 PM</div>
-      <div class="zone-card">Samsung A56 5G — 30/05/2025 — 3:00 PM</div>
+    <div class="notif-container">
+      <div class="notif-left">
+        <div class="notif-card">
+          <label><input type="checkbox" checked /> Notificaciones Push</label>
+        </div>
+
+        <div class="notif-card">
+          <label><input type="checkbox" /> Notificaciones por Email</label>
+        </div>
+
+        <div class="notif-card">
+          <label><input type="checkbox" checked /> Alertas de Emergencia</label>
+        </div>
+      </div>
+
+      <div class="zones-right">
+        <div class="zone-card">San Isidro - Lima</div>
+        <div class="zone-card">Miraflores - Lima</div>
+        <div class="zone-card">Lince - Lima</div>
+      </div>
     </div>
-  </body>
+  </section>
+
+  <!-- SEGURIDAD -->
+  <section class="content-section">
+    <h2>Seguridad y Sesiones</h2>
+
+    <div class="zone-card">iPhone 17 Pro Max — 28/05/2025 — 10:30 AM</div>
+    <div class="zone-card">Windows 11 Home — 28/05/2025 — 12:00 PM</div>
+    <div class="zone-card">Samsung A56 5G — 30/05/2025 — 3:00 PM</div>
+  </section>
+
+</body>
 </html>

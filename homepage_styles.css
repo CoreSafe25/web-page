@@ -49,6 +49,48 @@ nav ul li:hover {
   text-decoration: underline;
 }
 
+/* ==== DROPDOWN MENU ==== */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #504037;
+  padding: 0.5rem 0;
+  list-style: none;
+  border-radius: 6px;
+  display: none; /* Oculto por defecto */
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.7rem 1rem;
+  color: white;
+  transition: background 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background: #E67E22;
+}
+
+/* Mostrar cuando se pasa el mouse */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+/* Para móviles: activar desplegable por clic */
+.dropdown.open .dropdown-menu {
+  display: flex;
+}
+
+
 /* Hero */
 
 .hero {
