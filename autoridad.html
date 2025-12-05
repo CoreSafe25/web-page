@@ -1,81 +1,52 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>CoreSafe - Panel Autoridades</title>
-
-  <link rel="stylesheet" href="reportes-style.css">
-
+  <link rel="stylesheet" href="autoridad-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
-
 
 <body>
 
-
-
   <!-- =============================== -->
-
   <!--            NAVBAR               -->
-
   <!-- =============================== -->
-
   <header>
-
-<!-- Navbar -->
-  <nav>
-    <div class="wordmark"><a href="index.html">CoreSafe</a></div>
-    <ul>
-      <li><a href="notificacion.html">Alertas</a></li>
-      <li><a href="autoridad.html">Panel</a></li>
-      <li><a href="reportes-index.html">Reportes</a></li>
-      <li><a href="statsindex.html">Estadísticas</a></li>
-      <li><a href="about_us.html">About us</a></li>
-      <li><a href = "perfil.html">Perfil</a></li>
-    </ul>
-  </nav>
-
-
+    <nav>
+      <div class="wordmark"><a href="landing.html">CoreSafe</a></div>
+      
+      <!-- Menú hamburguesa para móviles -->
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      
+      <ul id="nav-menu">
+        <li><a href="notificaciones.html">Alertas</a></li>
+        <li><a href="PanelAutoridades_Empresa.html">Panel</a></li>
+        <li><a href="reportes-index.html">Reportes</a></li>
+        <li><a href="statsindex.html">Estadísticas</a></li>
+        <li><a href="about_us.html">About us</a></li>
+        <li><a href="index.html">Login</a></li>
+      </ul>
+    </nav>
   </header>
 
-
-
   <!-- =============================== -->
-
   <!--         TITULO + BOTON          -->
-
   <!-- =============================== -->
-
   <div class="panel-title">PANEL AUTORIDADES / EMPRESA</div>
 
-
-
-
-
   <!-- =============================== -->
-
   <!--           CONTENIDO             -->
-
   <!-- =============================== -->
-
   <div class="container">
 
-
-
     <!-- ====================== -->
-
     <!--    LISTA DE REPORTES   -->
-
     <!-- ====================== -->
-
     <section class="list-section">
-
       <div class="list-header">
         <h2>Listado de reportes</h2>
         <div class="filter-controls">
@@ -91,162 +62,106 @@
         </div>
       </div>
 
-
-
       <div class="report-list">
-
-
-
         <!-- CARD 1 -->
-
         <div class="report-card"
-
              data-id="r1"
-
              data-title="Grietas en construcción"
-
              data-date="2025-10-10"
-
              data-urgency="ALTA"
-
              data-location="San Miguel, Lima"
-
              data-description="Grieta estructural en unión de techo y pared. Riesgo de desprendimiento."
-
-             data-img1="assets/grieta1.jpg"
-
-             data-img2="assets/grieta2.jpg"
-
+             data-img1="https://images.unsplash.com/photo-1600585154340-963ed7476f83?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+             data-img2="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
              data-comments="Se observa un daño serio que debe ser atendido de inmediato.">
 
-
-
           <h3>Grietas en construcción</h3>
-
           <div class="meta">
-
             <span class="date">📅 2025-10-10</span>
-
-              <span class="urgency urgency-high">ALTA</span>
-
-              <span class="card-status status-active">Activo</span>
-
+            <!-- Selector de riesgo interactivo -->
+            <div class="risk-selector">
+              <span class="risk-label">Riesgo:</span>
+              <div class="risk-options">
+                <span class="risk-option risk-high selected" data-risk="ALTA">ALTO</span>
+                <span class="risk-option risk-medium" data-risk="MEDIA">MEDIO</span>
+                <span class="risk-option risk-low" data-risk="BAJA">BAJO</span>
+              </div>
+            </div>
+            <span class="card-status status-active">Activo</span>
           </div>
-
           <div class="icons">
-
             <span class="comment-icon">🗨️ <span class="comment-count">12</span></span>
-
             <span class="like-container">
-
               <span class="like-button" data-report-id="r1">🤍</span> <span class="like-count">98</span>
-
             </span>
-
           </div>
-
         </div>
-
-
 
         <!-- CARD 2 -->
-
         <div class="report-card"
-
              data-id="r2"
-
              data-title="Techo goteando"
-
              data-date="2025-10-11"
-
              data-urgency="MEDIA"
-
              data-location="Miraflores"
-
              data-description="Filtro de agua en el techo del pasillo principal."
-
-             data-img1="assets/goteo1.jpg"
-
-             data-img2="assets/goteo2.jpg"
-
+             data-img1="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+             data-img2="https://images.unsplash.com/photo-1584118624012-df056829f8c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
              data-comments="Esto puede empeorar si no se revisa.">
 
-
-
           <h3>Techo goteando</h3>
-
           <div class="meta">
-
             <span class="date">📅 2025-10-11</span>
-
-              <span class="urgency urgency-medium">MEDIA</span>
-
-              <span class="card-status status-active">Activo</span>
-
+            <!-- Selector de riesgo interactivo -->
+            <div class="risk-selector">
+              <span class="risk-label">Riesgo:</span>
+              <div class="risk-options">
+                <span class="risk-option risk-high" data-risk="ALTA">ALTO</span>
+                <span class="risk-option risk-medium selected" data-risk="MEDIA">MEDIO</span>
+                <span class="risk-option risk-low" data-risk="BAJA">BAJO</span>
+              </div>
+            </div>
+            <span class="card-status status-active">Activo</span>
           </div>
-
           <div class="icons">
-
             <span class="comment-icon">🗨️ <span class="comment-count">4</span></span>
-
             <span class="like-container">
-
               <span class="like-button" data-report-id="r2">🤍</span> <span class="like-count">27</span>
-
             </span>
-
           </div>
-
         </div>
 
-
-
         <!-- CARD 3 -->
-
         <div class="report-card"
-
              data-title="Pared húmeda"
-
              data-date="2025-10-12"
-
              data-urgency="MEDIA"
-
              data-location="La Molina"
-
              data-description="Humedad en la pared cercana a tuberías internas."
-
-             data-img1="assets/humedad1.jpg"
-
-             data-img2="assets/humedad2.jpg"
-
+             data-img1="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+             data-img2="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
              data-comments="La humedad está expandiéndose lentamente.">
 
-
-
           <h3>Pared húmeda</h3>
-
           <div class="meta">
-
             <span class="date">📅 2025-10-12</span>
-
-              <span class="urgency urgency-medium">MEDIA</span>
-
-              <span class="card-status status-active">Activo</span>
-
+            <!-- Selector de riesgo interactivo -->
+            <div class="risk-selector">
+              <span class="risk-label">Riesgo:</span>
+              <div class="risk-options">
+                <span class="risk-option risk-high" data-risk="ALTA">ALTO</span>
+                <span class="risk-option risk-medium selected" data-risk="MEDIA">MEDIO</span>
+                <span class="risk-option risk-low" data-risk="BAJA">BAJO</span>
+              </div>
+            </div>
+            <span class="card-status status-active">Activo</span>
           </div>
-
           <div class="icons">
-
             <span class="comment-icon">🗨️ <span class="comment-count">7</span></span>
-
             <span class="like-container">
-
               <span class="like-button" data-report-id="r3">🤍</span> <span class="like-count">31</span>
-
             </span>
-
           </div>
-
         </div>
 
         <!-- CARD 4 -->
@@ -257,14 +172,22 @@
              data-urgency="BAJA"
              data-location="Pueblo Libre"
              data-description="Puerta de entrada con bisagras rotas."
-             data-img1="assets/puerta1.jpg"
-             data-img2="assets/puerta2.jpg"
+             data-img1="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+             data-img2="https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
              data-comments="Necesita reparación pero no es urgente.">
 
           <h3>Puerta dañada</h3>
           <div class="meta">
             <span class="date">📅 2025-10-13</span>
-            <span class="urgency urgency-low">BAJA</span>
+            <!-- Selector de riesgo interactivo -->
+            <div class="risk-selector">
+              <span class="risk-label">Riesgo:</span>
+              <div class="risk-options">
+                <span class="risk-option risk-high" data-risk="ALTA">ALTO</span>
+                <span class="risk-option risk-medium" data-risk="MEDIA">MEDIO</span>
+                <span class="risk-option risk-low selected" data-risk="BAJA">BAJO</span>
+              </div>
+            </div>
             <span class="card-status status-active">Activo</span>
           </div>
           <div class="icons">
@@ -283,14 +206,22 @@
              data-urgency="ALTA"
              data-location="San Borja"
              data-description="Fuga de agua en tuberías del sótano."
-             data-img1="assets/tuberia1.jpg"
-             data-img2="assets/tuberia2.jpg"
+             data-img1="https://images.unsplash.com/photo-1621967299229-c6e7085b9b6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+             data-img2="https://images.unsplash.com/photo-1567721913496-6585be2e0e6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
              data-comments="Riesgo de inundación, requiere atención inmediata.">
 
           <h3>Tuberías con fugas</h3>
           <div class="meta">
             <span class="date">📅 2025-10-14</span>
-            <span class="urgency urgency-high">ALTA</span>
+            <!-- Selector de riesgo interactivo -->
+            <div class="risk-selector">
+              <span class="risk-label">Riesgo:</span>
+              <div class="risk-options">
+                <span class="risk-option risk-high selected" data-risk="ALTA">ALTO</span>
+                <span class="risk-option risk-medium" data-risk="MEDIA">MEDIO</span>
+                <span class="risk-option risk-low" data-risk="BAJA">BAJO</span>
+              </div>
+            </div>
             <span class="card-status status-active">Activo</span>
           </div>
           <div class="icons">
@@ -309,14 +240,22 @@
              data-urgency="MEDIA"
              data-location="Lince"
              data-description="Escaleras principales con material antideslizante desgastado."
-             data-img1="assets/escalera1.jpg"
-             data-img2="assets/escalera2.jpg"
+             data-img1="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+             data-img2="https://images.unsplash.com/photo-1560355806-b9a5f8e42c37?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
              data-comments="Peligro de accidentes por resbalones.">
 
           <h3>Escaleras resbaladizas</h3>
           <div class="meta">
             <span class="date">📅 2025-10-15</span>
-            <span class="urgency urgency-medium">MEDIA</span>
+            <!-- Selector de riesgo interactivo -->
+            <div class="risk-selector">
+              <span class="risk-label">Riesgo:</span>
+              <div class="risk-options">
+                <span class="risk-option risk-high" data-risk="ALTA">ALTO</span>
+                <span class="risk-option risk-medium selected" data-risk="MEDIA">MEDIO</span>
+                <span class="risk-option risk-low" data-risk="BAJA">BAJO</span>
+              </div>
+            </div>
             <span class="card-status status-active">Activo</span>
           </div>
           <div class="icons">
@@ -335,14 +274,22 @@
              data-urgency="MEDIA"
              data-location="Jesús María"
              data-description="Luminarias apagadas en el pasillo norte."
-             data-img1="assets/luz1.jpg"
-             data-img2="assets/luz2.jpg"
+             data-img1="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+             data-img2="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
              data-comments="Necesita reemplazo de focos y revisión del circuito.">
 
           <h3>Iluminación deficiente</h3>
           <div class="meta">
             <span class="date">📅 2025-10-16</span>
-            <span class="urgency urgency-medium">MEDIA</span>
+            <!-- Selector de riesgo interactivo -->
+            <div class="risk-selector">
+              <span class="risk-label">Riesgo:</span>
+              <div class="risk-options">
+                <span class="risk-option risk-high" data-risk="ALTA">ALTO</span>
+                <span class="risk-option risk-medium selected" data-risk="MEDIA">MEDIO</span>
+                <span class="risk-option risk-low" data-risk="BAJA">BAJO</span>
+              </div>
+            </div>
             <span class="card-status status-active">Activo</span>
           </div>
           <div class="icons">
@@ -361,14 +308,22 @@
              data-urgency="ALTA"
              data-location="Chaclacayo"
              data-description="Columnas estructurales con oxidación avanzada."
-             data-img1="assets/oxidacion1.jpg"
-             data-img2="assets/oxidacion2.jpg"
+             data-img1="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+             data-img2="https://images.unsplash.com/photo-1594771253257-5daf8dcd9089?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
              data-comments="Riesgo estructural, requiere intervención profesional.">
 
           <h3>Oxidación en columnas</h3>
           <div class="meta">
             <span class="date">📅 2025-10-17</span>
-            <span class="urgency urgency-high">ALTA</span>
+            <!-- Selector de riesgo interactivo -->
+            <div class="risk-selector">
+              <span class="risk-label">Riesgo:</span>
+              <div class="risk-options">
+                <span class="risk-option risk-high selected" data-risk="ALTA">ALTO</span>
+                <span class="risk-option risk-medium" data-risk="MEDIA">MEDIO</span>
+                <span class="risk-option risk-low" data-risk="BAJA">BAJO</span>
+              </div>
+            </div>
             <span class="card-status status-active">Activo</span>
           </div>
           <div class="icons">
@@ -378,111 +333,66 @@
             </span>
           </div>
         </div>
-
-
-
-
       </div>
-
     </section>
 
-
-
     <!-- ====================== -->
-
     <!--        DETALLE          -->
-
     <!-- ====================== -->
-
     <aside class="detail" id="detailView">
-
-
-
       <div class="detail-header">
-
         <h3 id="detailTitle">Seleccione un reporte</h3>
-
         <span class="status status-active">Activo</span>
-
       </div>
-
-
 
       <div class="state-control">
-
         <label for="detailState"><strong>Estado:</strong></label>
-
         <select id="detailState">
-
           <option value="Activo">Activo</option>
-
           <option value="En revisión">En revisión</option>
-
           <option value="Resuelto">Resuelto</option>
-
         </select>
-
         <button id="btnChangeState" class="btn">Cambiar</button>
-
       </div>
-
-
 
       <div class="meta">
-
-        <strong>Urgencia:</strong> <span id="detailUrgency" class="urgency">—</span><br>
-
+        <!-- Selector de riesgo en el panel de detalle -->
+        <div class="detail-risk-selector">
+          <strong>Nivel de Riesgo:</strong>
+          <div class="risk-selector-detail">
+            <span class="risk-detail-option risk-high" data-risk="ALTA">Alto</span>
+            <span class="risk-detail-option risk-medium" data-risk="MEDIA">Medio</span>
+            <span class="risk-detail-option risk-low" data-risk="BAJA">Bajo</span>
+          </div>
+        </div>
+        
         <strong>Fecha:</strong> <span id="detailDate">—</span><br>
-
         <strong>Ubicación:</strong> <span id="detailLocation">—</span><br>
-
         <strong>Inspector asignado:</strong> <span id="detailInspector">No asignado</span><br>
-
         <strong>Validación:</strong> <span id="detailValidation">Pendiente</span>
-
       </div>
-
-
 
       <div class="likes">
-
         <span class="like-button-detail" id="likeButtonDetail">🤍</span>
-
         <span id="detailLikes">0</span> Likes
-
         <button id="btnApply" class="btn btn-apply">Aplicar / Contactar</button>
-
       </div>
-
-
 
       <h4 class="section-title">Descripción</h4>
-
       <p id="detailDescription">Seleccione un reporte para ver los detalles.</p>
 
-
-
       <h4 class="section-title">Fotos / Evidencia</h4>
-
       <div class="photos">
-
         <img id="img1" src="https://via.placeholder.com/150">
-
         <img id="img2" src="https://via.placeholder.com/150">
-
       </div>
-
-
 
       <h4 class="section-title">Comentarios y Respuestas</h4>
-
       <div id="commentsList" class="comments-list">
-
         <!-- Los comentarios se renderizarán dinámicamente aquí -->
-
       </div>
 
-      <!-- Nuevo: Área para responder comentarios -->
+      <!-- Área para responder comentarios -->
       <div id="replySection" class="reply-section" style="display: none;">
         <div class="reply-header">
           <span id="replyToUser"></span>
@@ -495,60 +405,31 @@
       </div>
 
       <div class="comment-box" style="display: none;">
-
         <div class="comment-user">Ciudadano</div>
-
         <div id="detailComments">—</div>
-
       </div>
-
-
-
     </aside>
 
-
-
     <!-- Modal pequeño de aplicado -->
-
     <div id="appliedModal" class="applied-modal" aria-hidden="true">
-
       <div class="applied-modal-content" role="dialog" aria-label="Aplicado">
-
         <div class="applied-icon">✔</div>
-
         <div class="applied-text">APLICADO</div>
-
       </div>
-
     </div>
-
-
 
     <!-- Modal para confirmar 'Resuelto' y dejar nota -->
-
     <div id="resolveModal" class="resolve-modal" aria-hidden="true">
-
       <div class="resolve-modal-content" role="dialog" aria-label="Confirmar resolución">
-
         <h4>Confirmar cambio a <strong>Resuelto</strong></h4>
-
         <p>Deje una nota breve con la solución (recomendado):</p>
-
         <textarea id="resolveNote" rows="4" placeholder="Breve nota de la solución..."></textarea>
-
         <div class="resolve-actions">
-
           <button id="btnConfirmResolve" class="btn">Confirmar</button>
-
           <button id="btnCancelResolve" class="btn">Cancelar</button>
-
         </div>
-
       </div>
-
     </div>
-
-
 
     <!-- Modal para filtros -->
     <div id="filterModal" class="filter-modal" aria-hidden="true">
@@ -635,45 +516,23 @@
         </div>
       </div>
     </div>
-
   </div>
 
-
-
   <!-- =============================== -->
-
   <!--             FOOTER              -->
-
   <!-- =============================== -->
-
   <footer>
-
     <div class="footer-wordmark">CoreSafe</div>
-
     <p>&copy; 2025 CoreSafe. Todos los derechos reservados.</p>
-
     <ul>
-
       <li><a href="faq.html">FAQ</a></li>
-
       <li><a href="https://www.termsfeed.com/public/uploads/2021/12/sample-cookies-policy-template.pdf">Cookie Policies</a></li>
-
       <li><a href="https://www.termsfeed.com/public/uploads/2021/12/sample-privacy-policy-template.pdf">Private Policy</a></li>
-
       <li><a href="#">Terms & Conditions</a></li>
-
     </ul>
-
   </footer>
 
-
-
   <!-- JS DINÁMICO -->
-
-  <script src="panel.js"></script>
-
-
-
+  <script src="autoridad.js"></script>
 </body>
-
 </html>

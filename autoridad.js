@@ -1,12 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   
-  // ------------------------------------------------------------------
-  // !!! ATENCIÓN: SOLUCIÓN TEMPORAL PARA EL ERROR RECURRENTE !!!
-  // Esta línea BORRA TODOS los estados (applied y status) guardados.
-  // COMENTA O ELIMINA esta línea después de verificar que funciona.
-  localStorage.clear();
-  // ------------------------------------------------------------------
-
   // ================================================================
   // VARIABLES GLOBALES
   // ================================================================
@@ -30,15 +23,113 @@ document.addEventListener('DOMContentLoaded', () => {
   let isLoadingMore = false;
   let infiniteCurrentPage = 0;
   const reportsPerPage = 3;
+  
+  // Datos actualizados con URLs de imágenes reales de Unsplash
   const allReportsData = [
-    { id: 'r1', title: 'Grietas en construcción', date: '2025-10-10', urgency: 'ALTA', location: 'San Miguel, Lima', description: 'Grieta estructural en unión de techo y pared. Riesgo de desprendimiento.', img1: 'assets/grieta1.jpg', img2: 'assets/grieta2.jpg', comments: 'Se observa un daño serio que debe ser atendido de inmediato.', comments_count: 12, likes: 98 },
-    { id: 'r2', title: 'Techo goteando', date: '2025-10-11', urgency: 'MEDIA', location: 'Miraflores', description: 'Filtro de agua en el techo del pasillo principal.', img1: 'assets/goteo1.jpg', img2: 'assets/goteo2.jpg', comments: 'Esto puede empeorar si no se revisa.', comments_count: 4, likes: 27 },
-    { id: 'r3', title: 'Pared húmeda', date: '2025-10-12', urgency: 'MEDIA', location: 'La Molina', description: 'Humedad en la pared cercana a tuberías internas.', img1: 'assets/humedad1.jpg', img2: 'assets/humedad2.jpg', comments: 'La humedad está expandiéndose lentamente.', comments_count: 7, likes: 31 },
-    { id: 'r4', title: 'Puerta dañada', date: '2025-10-13', urgency: 'BAJA', location: 'Pueblo Libre', description: 'Puerta de entrada con bisagras rotas.', img1: 'assets/puerta1.jpg', img2: 'assets/puerta2.jpg', comments: 'Necesita reparación pero no es urgente.', comments_count: 5, likes: 19 },
-    { id: 'r5', title: 'Tuberías con fugas', date: '2025-10-14', urgency: 'ALTA', location: 'San Borja', description: 'Fuga de agua en tuberías del sótano.', img1: 'assets/tuberia1.jpg', img2: 'assets/tuberia2.jpg', comments: 'Riesgo de inundación, requiere atención inmediata.', comments_count: 14, likes: 56 },
-    { id: 'r6', title: 'Escaleras resbaladizas', date: '2025-10-15', urgency: 'MEDIA', location: 'Lince', description: 'Escaleras principales con material antideslizante desgastado.', img1: 'assets/escalera1.jpg', img2: 'assets/escalera2.jpg', comments: 'Peligro de accidentes por resbalones.', comments_count: 9, likes: 44 },
-    { id: 'r7', title: 'Iluminación deficiente', date: '2025-10-16', urgency: 'MEDIA', location: 'Jesús María', description: 'Luminarias apagadas en el pasillo norte.', img1: 'assets/luz1.jpg', img2: 'assets/luz2.jpg', comments: 'Necesita reemplazo de focos y revisión del circuito.', comments_count: 6, likes: 22 },
-    { id: 'r8', title: 'Oxidación en columnas', date: '2025-10-17', urgency: 'ALTA', location: 'Chaclacayo', description: 'Columnas estructurales con oxidación avanzada.', img1: 'assets/oxidacion1.jpg', img2: 'assets/oxidacion2.jpg', comments: 'Riesgo estructural, requiere intervención profesional.', comments_count: 11, likes: 67 }
+    { 
+      id: 'r1', 
+      title: 'Grietas en construcción', 
+      date: '2025-10-10', 
+      urgency: 'ALTA', 
+      location: 'San Miguel, Lima', 
+      description: 'Grieta estructural en unión de techo y pared. Riesgo de desprendimiento.', 
+      img1: 'https://images.unsplash.com/photo-1600585154340-963ed7476f83?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      img2: 'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      comments: 'Se observa un daño serio que debe ser atendido de inmediato.', 
+      comments_count: 12, 
+      likes: 98 
+    },
+    { 
+      id: 'r2', 
+      title: 'Techo goteando', 
+      date: '2025-10-11', 
+      urgency: 'MEDIA', 
+      location: 'Miraflores', 
+      description: 'Filtro de agua en el techo del pasillo principal.', 
+      img1: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      img2: 'https://images.unsplash.com/photo-1584118624012-df056829f8c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      comments: 'Esto puede empeorar si no se revisa.', 
+      comments_count: 4, 
+      likes: 27 
+    },
+    { 
+      id: 'r3', 
+      title: 'Pared húmeda', 
+      date: '2025-10-12', 
+      urgency: 'MEDIA', 
+      location: 'La Molina', 
+      description: 'Humedad en la pared cercana a tuberías internas.', 
+      img1: 'https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      img2: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60', 
+      comments: 'La humedad está expandiéndose lentamente.', 
+      comments_count: 7, 
+      likes: 31 
+    },
+    { 
+      id: 'r4', 
+      title: 'Puerta dañada', 
+      date: '2025-10-13', 
+      urgency: 'BAJA', 
+      location: 'Pueblo Libre', 
+      description: 'Puerta de entrada con bisagras rotas.', 
+      img1: 'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      img2: 'https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      comments: 'Necesita reparación pero no es urgente.', 
+      comments_count: 5, 
+      likes: 19 
+    },
+    { 
+      id: 'r5', 
+      title: 'Tuberías con fugas', 
+      date: '2025-10-14', 
+      urgency: 'ALTA', 
+      location: 'San Borja', 
+      description: 'Fuga de agua en tuberías del sótano.', 
+      img1: 'https://images.unsplash.com/photo-1621967299229-c6e7085b9b6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      img2: 'https://images.unsplash.com/photo-1567721913496-6585be2e0e6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      comments: 'Riesgo de inundación, requiere atención inmediata.', 
+      comments_count: 14, 
+      likes: 56 
+    },
+    { 
+      id: 'r6', 
+      title: 'Escaleras resbaladizas', 
+      date: '2025-10-15', 
+      urgency: 'MEDIA', 
+      location: 'Lince', 
+      description: 'Escaleras principales con material antideslizante desgastado.', 
+      img1: 'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      img2: 'https://images.unsplash.com/photo-1560355806-b9a5f8e42c37?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      comments: 'Peligro de accidentes por resbalones.', 
+      comments_count: 9, 
+      likes: 44 
+    },
+    { 
+      id: 'r7', 
+      title: 'Iluminación deficiente', 
+      date: '2025-10-16', 
+      urgency: 'MEDIA', 
+      location: 'Jesús María', 
+      description: 'Luminarias apagadas en el pasillo norte.', 
+      img1: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      img2: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      comments: 'Necesita reemplazo de focos y revisión del circuito.', 
+      comments_count: 6, 
+      likes: 22 
+    },
+    { 
+      id: 'r8', 
+      title: 'Oxidación en columnas', 
+      date: '2025-10-17', 
+      urgency: 'ALTA', 
+      location: 'Chaclacayo', 
+      description: 'Columnas estructurales con oxidación avanzada.', 
+      img1: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      img2: 'https://images.unsplash.com/photo-1594771253257-5daf8dcd9089?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      comments: 'Riesgo estructural, requiere intervención profesional.', 
+      comments_count: 11, 
+      likes: 67 
+    }
   ];
 
   // Datos de comentarios simulados por reporte
@@ -130,6 +221,152 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterLocationSelect = document.getElementById('filterLocation');
   const filterDateFrom = document.getElementById('filterDateFrom');
   const filterDateTo = document.getElementById('filterDateTo');
+
+  // Elementos para menú hamburguesa
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  // Elementos para selector de riesgo
+  const riskDetailOptions = document.querySelectorAll('.risk-detail-option');
+
+  // ================================================================
+  // FUNCIONES DE MENÚ HAMBURGUESA
+  // ================================================================
+  function toggleMobileMenu() {
+    if (isMobile()) {
+      navMenu.classList.toggle('active');
+      // Crear o eliminar overlay
+      let overlay = document.querySelector('.menu-overlay');
+      if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'menu-overlay';
+        document.body.appendChild(overlay);
+        
+        overlay.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+          overlay.classList.remove('active');
+        });
+      }
+      overlay.classList.toggle('active');
+    }
+  }
+
+  // ================================================================
+  // FUNCIONES DE SELECTOR DE RIESGO
+  // ================================================================
+  function initializeRiskSelectors() {
+    // Inicializar selectores de riesgo en tarjetas
+    const riskSelectors = document.querySelectorAll('.risk-option');
+    riskSelectors.forEach(option => {
+      option.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const card = this.closest('.report-card');
+        const reportId = card.dataset.id;
+        const newRisk = this.dataset.risk;
+        
+        // Actualizar el dataset de la tarjeta
+        card.dataset.urgency = newRisk;
+        
+        // Actualizar la clase de urgencia en el detalle si esta tarjeta está seleccionada
+        if (currentCard && currentCard === card) {
+          updateDetailRisk(newRisk);
+        }
+        
+        // Actualizar la interfaz de usuario
+        updateRiskSelectorUI(this);
+        
+        // Guardar en localStorage
+        saveRiskPreference(reportId, newRisk);
+      });
+    });
+    
+    // Inicializar selectores de riesgo en el detalle
+    if (riskDetailOptions) {
+      riskDetailOptions.forEach(option => {
+        option.addEventListener('click', function() {
+          if (!currentCard) return;
+          
+          const newRisk = this.dataset.risk;
+          const reportId = currentCard.dataset.id;
+          
+          // Actualizar el dataset de la tarjeta
+          currentCard.dataset.urgency = newRisk;
+          
+          // Actualizar la interfaz de usuario
+          updateDetailRisk(newRisk);
+          
+          // Actualizar el selector de riesgo en la tarjeta
+          updateCardRiskSelector(currentCard, newRisk);
+          
+          // Guardar en localStorage
+          saveRiskPreference(reportId, newRisk);
+        });
+      });
+    }
+  }
+  
+  function updateRiskSelectorUI(selectedOption) {
+    const selectorContainer = selectedOption.closest('.risk-options');
+    const options = selectorContainer.querySelectorAll('.risk-option');
+    
+    // Remover clase selected de todas las opciones
+    options.forEach(option => {
+      option.classList.remove('selected');
+    });
+    
+    // Agregar clase selected a la opción clickeada
+    selectedOption.classList.add('selected');
+  }
+  
+  function updateDetailRisk(riskLevel) {
+    // Actualizar la visualización de riesgo en el detalle
+    const urgencySpan = document.getElementById('detailUrgency');
+    if (urgencySpan) {
+      urgencySpan.textContent = riskLevel;
+      urgencySpan.className = 'urgency';
+      
+      if (riskLevel === 'ALTA') urgencySpan.classList.add('urgency-high');
+      else if (riskLevel === 'MEDIA') urgencySpan.classList.add('urgency-medium');
+      else urgencySpan.classList.add('urgency-low');
+    }
+    
+    // Actualizar el selector de riesgo en el detalle
+    if (riskDetailOptions) {
+      riskDetailOptions.forEach(option => {
+        option.classList.remove('selected');
+        if (option.dataset.risk === riskLevel) {
+          option.classList.add('selected');
+        }
+      });
+    }
+  }
+  
+  function updateCardRiskSelector(card, riskLevel) {
+    const riskOptions = card.querySelectorAll('.risk-option');
+    riskOptions.forEach(option => {
+      option.classList.remove('selected');
+      if (option.dataset.risk === riskLevel) {
+        option.classList.add('selected');
+      }
+    });
+  }
+  
+  function saveRiskPreference(reportId, riskLevel) {
+    try {
+      localStorage.setItem(`risk:${reportId}`, riskLevel);
+    } catch (e) {
+      console.error('Error al guardar preferencia de riesgo:', e);
+    }
+  }
+  
+  function loadRiskPreference(reportId) {
+    try {
+      return localStorage.getItem(`risk:${reportId}`);
+    } catch (e) {
+      console.error('Error al cargar preferencia de riesgo:', e);
+      return null;
+    }
+  }
 
   // ================================================================
   // FUNCIONES DE FILTRADO
@@ -290,13 +527,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // FUNCIONES DE INFINITE SCROLL
   // ================================================================
   function createReportCard(report) {
-    const urgencyClass = report.urgency === 'ALTA' ? 'urgency-high' : (report.urgency === 'MEDIA' ? 'urgency-medium' : 'urgency-low');
+    // Cargar preferencia de riesgo guardada
+    const savedRisk = loadRiskPreference(report.id) || report.urgency;
+    const isHighSelected = savedRisk === 'ALTA' ? 'selected' : '';
+    const isMediumSelected = savedRisk === 'MEDIA' ? 'selected' : '';
+    const isLowSelected = savedRisk === 'BAJA' ? 'selected' : '';
+    
     const card = document.createElement('div');
     card.className = 'report-card';
     card.dataset.id = report.id;
     card.dataset.title = report.title;
     card.dataset.date = report.date;
-    card.dataset.urgency = report.urgency;
+    card.dataset.urgency = savedRisk; // Usar riesgo guardado
     card.dataset.location = report.location;
     card.dataset.description = report.description;
     card.dataset.img1 = report.img1;
@@ -306,7 +548,14 @@ document.addEventListener('DOMContentLoaded', () => {
       <h3>${report.title}</h3>
       <div class="meta">
         <span class="date">📅 ${report.date}</span>
-        <span class="urgency ${urgencyClass}">${report.urgency}</span>
+        <div class="risk-selector">
+          <span class="risk-label">Riesgo:</span>
+          <div class="risk-options">
+            <span class="risk-option risk-high ${isHighSelected}" data-risk="ALTA">ALTO</span>
+            <span class="risk-option risk-medium ${isMediumSelected}" data-risk="MEDIA">MEDIO</span>
+            <span class="risk-option risk-low ${isLowSelected}" data-risk="BAJA">BAJO</span>
+          </div>
+        </div>
         <span class="card-status status-active">Activo</span>
       </div>
       <div class="icons">
@@ -327,6 +576,30 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         populate(card);
       }
+    });
+    
+    // Agregar listeners a los selectores de riesgo
+    const riskOptions = card.querySelectorAll('.risk-option');
+    riskOptions.forEach(option => {
+      option.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const reportId = card.dataset.id;
+        const newRisk = this.dataset.risk;
+        
+        // Actualizar el dataset de la tarjeta
+        card.dataset.urgency = newRisk;
+        
+        // Actualizar la clase de urgencia en el detalle si esta tarjeta está seleccionada
+        if (currentCard && currentCard === card) {
+          updateDetailRisk(newRisk);
+        }
+        
+        // Actualizar la interfaz de usuario
+        updateRiskSelectorUI(this);
+        
+        // Guardar en localStorage
+        saveRiskPreference(reportId, newRisk);
+      });
     });
   }
 
@@ -561,18 +834,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     detail.title.textContent = card.dataset.title || '—';
 
-    // Urgencia y clases
-    detail.urgency.textContent = card.dataset.urgency || '—';
-    detail.urgency.className = 'urgency';
-    if ((card.dataset.urgency || '').toUpperCase() === 'ALTA') detail.urgency.classList.add('urgency-high');
-    else if ((card.dataset.urgency || '').toUpperCase() === 'MEDIA') detail.urgency.classList.add('urgency-medium');
-    else detail.urgency.classList.add('urgency-low');
+    // Urgencia y clases - usar riesgo guardado o dataset
+    const savedRisk = loadRiskPreference(card.dataset.id) || card.dataset.urgency || 'MEDIA';
+    updateDetailRisk(savedRisk);
 
     detail.date.textContent = card.dataset.date || '—';
     detail.location.textContent = card.dataset.location || '—';
     detail.description.textContent = card.dataset.description || '—';
+    
+    // Mostrar imágenes reales desde los datos
     detail.img1.src = card.dataset.img1 || 'https://via.placeholder.com/150';
     detail.img2.src = card.dataset.img2 || 'https://via.placeholder.com/150';
+    
     detail.comments.textContent = card.dataset.comments || '—';
 
     // Extraer likes desde el bloque .icons
@@ -908,6 +1181,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ================================================================
+  // EVENT LISTENERS PARA MENÚ HAMBURGUESA
+  // ================================================================
+  if (hamburger) {
+    hamburger.addEventListener('click', toggleMobileMenu);
+  }
+
+  // Cerrar menú al hacer clic en un enlace
+  if (navMenu) {
+    navMenu.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A' && isMobile()) {
+        toggleMobileMenu();
+      }
+    });
+  }
+
+  // ================================================================
   // EVENT LISTENERS PARA FILTROS
   // ================================================================
   // Búsqueda en tiempo real
@@ -1021,15 +1310,24 @@ document.addEventListener('DOMContentLoaded', () => {
       clearSelected();
       hideReplySection();
     }
+    
+    // Cerrar menú hamburguesa si se redimensiona a desktop
+    if (!isMobile() && navMenu) {
+      navMenu.classList.remove('active');
+      const overlay = document.querySelector('.menu-overlay');
+      if (overlay) {
+        overlay.classList.remove('active');
+      }
+    }
   });
 
   // ================================================================
   // INICIALIZACIÓN
   // ================================================================
   initializeCardLikes();
+  initializeRiskSelectors();
   setupInfiniteScroll();
   
   // Aplicar filtros iniciales
   applyFilters();
-
 });

@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -18,38 +18,58 @@ a {
   color: inherit;
 }
 
-/* Navbar */
+/* ================
+   NAVBAR
+===================*/
 nav {
-  position: sticky;
-  z-index: 1000;
-    top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #504037;
-  color: #fff;
+  background: #504037;
+  padding: 15px 30px;
+  position: relative;
 }
 
-nav .wordmark {
+nav .wordmark a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+}
+
+/* Menú hamburguesa - oculto en desktop */
+.hamburger {
+  display: none;
   font-size: 1.5rem;
-  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.hamburger:hover {
+  opacity: 0.8;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 25px;
+  list-style: none;
+  transition: all 0.3s ease;
 }
 
-nav ul li {
-  cursor: pointer;
-  transition: 0.3s;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 
-nav ul li:hover {
-  text-decoration: underline;
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
+
 /* ================
    TITULO
 ===================*/
@@ -201,6 +221,80 @@ nav ul li:hover {
   margin: 5px 0;
   font-size: 0.85rem;
   line-height: 1.4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Selector de riesgo en tarjetas */
+.risk-selector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.risk-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.risk-options {
+  display: flex;
+  gap: 2px;
+  background: #f0f0f0;
+  border-radius: 6px;
+  padding: 2px;
+}
+
+.risk-option {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.risk-option:hover {
+  transform: scale(1.05);
+}
+
+.risk-option.selected {
+  color: white;
+}
+
+.risk-high {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.risk-high.selected {
+  background-color: #ff4d4f;
+  box-shadow: 0 2px 4px rgba(255, 77, 79, 0.3);
+}
+
+.risk-medium {
+  background-color: #ffd166;
+  color: #333;
+}
+
+.risk-medium.selected {
+  background-color: #ffa733;
+  color: white;
+  box-shadow: 0 2px 4px rgba(255, 167, 51, 0.3);
+}
+
+.risk-low {
+  background-color: #8ac926;
+  color: #333;
+}
+
+.risk-low.selected {
+  background-color: #4caf50;
+  color: white;
+  box-shadow: 0 2px 4px rgba(76, 175, 80, 0.3);
 }
 
 .icons {
@@ -279,6 +373,37 @@ nav ul li:hover {
 .status-resolved {
   background: #2e7d32;
   color: white;
+}
+
+/* Selector de riesgo en detalle */
+.detail-risk-selector {
+  margin-bottom: 8px;
+}
+
+.risk-selector-detail {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.risk-detail-option {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  min-width: 70px;
+  text-align: center;
+}
+
+.risk-detail-option:hover {
+  transform: scale(1.05);
+}
+
+.risk-detail-option.selected {
+  border-color: #00303e;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .likes {
@@ -837,6 +962,59 @@ nav ul li:hover {
 }
 
 @media (max-width: 768px) {
+  /* Navbar responsive */
+  .hamburger {
+    display: block;
+  }
+  
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #504037;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding-top: 80px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  nav ul.active {
+    right: 0;
+  }
+  
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+  
+  /* Overlay para menú móvil */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+  }
+  
+  .menu-overlay.active {
+    display: block;
+  }
+  
   /* Mobile infinite scroll adjustments */
   body {
     display: flex;
@@ -903,6 +1081,28 @@ nav ul li:hover {
     width: 100%;
   }
 
+  /* Ajustes para el selector de riesgo en móvil */
+  .meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .risk-selector {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .risk-options {
+    flex: 1;
+    justify-content: space-between;
+  }
+  
+  .risk-option {
+    flex: 1;
+    text-align: center;
+  }
+
   .detail {
     position: fixed;
     top: 0;
@@ -946,6 +1146,16 @@ nav ul li:hover {
     font-weight: 600;
     font-size: 14px;
     flex: 1;
+  }
+
+  /* Selector de riesgo en detalle móvil */
+  .risk-selector-detail {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .risk-detail-option {
+    width: 100%;
   }
 
   /* Ajustes responsivos para reply section */
@@ -1003,13 +1213,9 @@ nav ul li:hover {
 
 @media (max-width: 600px) {
   nav ul {
-    display: none;
+    width: 85%;
   }
-
-  nav {
-    justify-content: center;
-  }
-
+  
   .container {
     padding: 10px 20px;
   }
