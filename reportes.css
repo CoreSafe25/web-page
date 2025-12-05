@@ -99,6 +99,7 @@ label{
 
 input{
   width:100%;
+  padding: 0rem 0.5rem;
 }
 
 .button-group{
@@ -114,7 +115,7 @@ input{
 }
 button{
   height: 3rem;
-  width: 10rem;
+  width: 11rem;
   color: #FFFFFF;
   padding: 0.5rem 2rem;
   border: #5D4037 solid;
@@ -122,6 +123,34 @@ button{
   font-weight: bold;
 }
 
+.upload-area {
+  width: 25rem;
+  height: 180px;
+  border: 2px dashed #888;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.upload-area.dragover {
+  border-color: #4F3F84;
+  background-color: #f2f2f2;
+}
+
+.upload-area img {
+  width: 9rem;
+  max-height: 20rem;
+  object-fit: contain;
+  display: none;
+}
+
+.upload-area input {
+  display: none;
+}
 
 
 /* Footer */
